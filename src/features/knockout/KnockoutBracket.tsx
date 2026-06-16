@@ -141,6 +141,72 @@ function MobileBracketColumn({
   )
 }
 
+const MOBILE_TIE_HEIGHT = 96
+const MOBILE_TIE_GAP = 16
+const MOBILE_TIE_STEP = MOBILE_TIE_HEIGHT + MOBILE_TIE_GAP
+const MOBILE_TIE_MIDPOINT = MOBILE_TIE_HEIGHT / 2
+
+function MobileConnectorRail({
+  sourceCount,
+  targetCount,
+  sourceOffset = 0,
+  targetOffset = 0,
+}: {
+  sourceCount: number
+  targetCount: number
+  sourceOffset?: number
+  targetOffset?: number
+}) {
+  const visibleSourceCount = Math.min(sourceCount, targetCount * 2)
+  const height =
+    Math.max(
+      sourceOffset + Math.max(sourceCount - 1, 0) * MOBILE_TIE_STEP + MOBILE_TIE_HEIGHT,
+      targetOffset + Math.max(targetCount - 1, 0) * MOBILE_TIE_STEP + MOBILE_TIE_HEIGHT,
+    ) + 8
+
+  return (
+    <svg
+      className="mt-8 w-10 shrink-0 overflow-visible"
+      width="40"
+      height={height}
+      viewBox={`0 0 40 ${height}`}
+      fill="none"
+      aria-hidden
+    >
+      {Array.from({ length: visibleSourceCount }, (_, sourceIndex) => {
+        const targetIndex = Math.floor(sourceIndex / 2)
+        const sourceY = sourceOffset + sourceIndex * MOBILE_TIE_STEP + MOBILE_TIE_MIDPOINT
+        const targetY = targetOffset + targetIndex * MOBILE_TIE_STEP + MOBILE_TIE_MIDPOINT
+        const busX = sourceIndex % 2 === 0 ? 20 : 26
+
+        return (
+          <path
+            key={sourceIndex}
+            d={`M0 ${sourceY} H${busX} V${targetY} H40`}
+            stroke="rgb(250 218 113 / 0.38)"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        )
+      })}
+      {Array.from({ length: targetCount }, (_, targetIndex) => {
+        const targetY = targetOffset + targetIndex * MOBILE_TIE_STEP + MOBILE_TIE_MIDPOINT
+
+        return (
+          <circle
+            key={targetIndex}
+            cx="40"
+            cy={targetY}
+            r="2"
+            fill="rgb(250 218 113 / 0.55)"
+          />
+        )
+      })}
+    </svg>
+  )
+}
+
 function MobileKnockoutBracket({ ties }: { ties: KnockoutTie[] }) {
   const pick = (round: Stage) =>
     ties.filter((t) => t.round === round).sort((a, b) => a.position - b.position)
@@ -196,11 +262,34 @@ function MobileKnockoutBracket({ ties }: { ties: KnockoutTie[] }) {
       </div>
 
       <div className="scroll-elegant mt-5 overflow-x-auto px-4 pb-4">
-        <div className="flex min-w-[1120px] items-start gap-3">
+        <div className="flex min-w-[1280px] items-start">
           <MobileBracketColumn title="16vos." ties={round32} showTeams />
+          <MobileConnectorRail
+            sourceCount={round32.length}
+            targetCount={round16.length}
+            targetOffset={48}
+          />
           <MobileBracketColumn title="8vos." ties={round16} showTeams={false} className="pt-[48px]" />
+          <MobileConnectorRail
+            sourceCount={round16.length}
+            targetCount={quarters.length}
+            sourceOffset={48}
+            targetOffset={144}
+          />
           <MobileBracketColumn title="CF" ties={quarters} showTeams={false} className="pt-[144px]" />
+          <MobileConnectorRail
+            sourceCount={quarters.length}
+            targetCount={semis.length}
+            sourceOffset={144}
+            targetOffset={240}
+          />
           <MobileBracketColumn title="SF" ties={semis} showTeams={false} className="pt-[240px]" />
+          <MobileConnectorRail
+            sourceCount={semis.length}
+            targetCount={final.length}
+            sourceOffset={240}
+            targetOffset={336}
+          />
           <MobileBracketColumn title="Final" ties={final} showTeams={false} className="pt-[336px]" />
         </div>
       </div>
