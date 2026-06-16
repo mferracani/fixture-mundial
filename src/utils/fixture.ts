@@ -21,10 +21,13 @@ export interface FixtureView {
 
 // ---- Aplicar un resultado cargado a un partido ----
 function applyResult(match: Match, entry: ScoreEntry | undefined): Match {
-  const home = entry?.home ?? null
-  const away = entry?.away ?? null
-  const ph = entry?.penaltiesHome ?? null
-  const pa = entry?.penaltiesAway ?? null
+  // Sin override local: respetar el resultado que venga en la data base.
+  if (entry === undefined) return match
+
+  const home = entry.home ?? null
+  const away = entry.away ?? null
+  const ph = entry.penaltiesHome ?? null
+  const pa = entry.penaltiesAway ?? null
   const hasScore = home != null && away != null
   if (!hasScore) {
     return { ...match, homeScore: null, awayScore: null, penaltiesHome: null, penaltiesAway: null, status: 'scheduled', winnerTeamId: null }
