@@ -1,21 +1,13 @@
 import type { BracketSide, Stage } from '@/types'
+import type { ThirdPlaceWinnerGroup } from './thirdPlaceRules'
 
-// Estructura del cuadro eliminatorio (32 clasificados).
-//
-// Slots de cada cruce de dieciseisavos:
-//   - 12 ganadores de grupo + 12 segundos + 8 mejores terceros = 32.
-//
-// El cuadro está armado de forma simétrica (8 cruces por lado) y SIN que
-// dos equipos del mismo grupo se crucen en dieciseisavos: los ganadores se
-// enfrentan a segundos de OTRO grupo, y los terceros entre sí. La asignación
-// exacta tercero→llave en la FIFA surge de una tabla oficial según qué grupos
-// aportan terceros; acá se usa el ranking de terceros (1º a 8º) de forma
-// determinística, suficiente para un predictor personal.
+// Estructura oficial FIFA del cuadro eliminatorio 2026.
+// Los cruces contra terceros se resuelven con Annex C en thirdPlaceRules.ts.
 
 export type SlotRef =
   | { kind: 'winner'; group: string }
   | { kind: 'runner'; group: string }
-  | { kind: 'third'; rank: number } // 0-based en el ranking de terceros
+  | { kind: 'third'; winnerGroup: ThirdPlaceWinnerGroup }
   | { kind: 'winnerOf'; tieId: string }
   | { kind: 'loserOf'; tieId: string }
 
@@ -30,60 +22,60 @@ export interface TieDef {
 
 const W = (group: string): SlotRef => ({ kind: 'winner', group })
 const R = (group: string): SlotRef => ({ kind: 'runner', group })
-const T = (rank: number): SlotRef => ({ kind: 'third', rank })
+const T = (winnerGroup: ThirdPlaceWinnerGroup): SlotRef => ({ kind: 'third', winnerGroup })
 const WO = (tieId: string): SlotRef => ({ kind: 'winnerOf', tieId })
 const LO = (tieId: string): SlotRef => ({ kind: 'loserOf', tieId })
 
-// Dieciseisavos (16) — 8 izquierda, 8 derecha
+// Dieciseisavos oficiales (matches 73 a 88), ordenados para respetar el bracket FIFA.
 const R32: TieDef[] = [
-  { id: 'r32-1', round: 'round32', side: 'left', position: 0, home: W('A'), away: R('B') },
-  { id: 'r32-2', round: 'round32', side: 'left', position: 1, home: W('C'), away: R('D') },
-  { id: 'r32-3', round: 'round32', side: 'left', position: 2, home: W('E'), away: R('F') },
-  { id: 'r32-4', round: 'round32', side: 'left', position: 3, home: T(0), away: T(7) },
-  { id: 'r32-5', round: 'round32', side: 'left', position: 4, home: W('G'), away: R('H') },
-  { id: 'r32-6', round: 'round32', side: 'left', position: 5, home: W('I'), away: R('J') },
-  { id: 'r32-7', round: 'round32', side: 'left', position: 6, home: W('K'), away: R('L') },
-  { id: 'r32-8', round: 'round32', side: 'left', position: 7, home: T(3), away: T(4) },
-  { id: 'r32-9', round: 'round32', side: 'right', position: 0, home: W('B'), away: R('A') },
-  { id: 'r32-10', round: 'round32', side: 'right', position: 1, home: W('D'), away: R('C') },
-  { id: 'r32-11', round: 'round32', side: 'right', position: 2, home: W('F'), away: R('E') },
-  { id: 'r32-12', round: 'round32', side: 'right', position: 3, home: T(1), away: T(6) },
-  { id: 'r32-13', round: 'round32', side: 'right', position: 4, home: W('H'), away: R('G') },
-  { id: 'r32-14', round: 'round32', side: 'right', position: 5, home: W('J'), away: R('I') },
-  { id: 'r32-15', round: 'round32', side: 'right', position: 6, home: W('L'), away: R('K') },
-  { id: 'r32-16', round: 'round32', side: 'right', position: 7, home: T(2), away: T(5) },
+  { id: 'r32-73', round: 'round32', side: 'left', position: 2, home: R('A'), away: R('B') },
+  { id: 'r32-74', round: 'round32', side: 'left', position: 0, home: W('E'), away: T('E') },
+  { id: 'r32-75', round: 'round32', side: 'left', position: 3, home: W('F'), away: R('C') },
+  { id: 'r32-76', round: 'round32', side: 'right', position: 0, home: W('C'), away: R('F') },
+  { id: 'r32-77', round: 'round32', side: 'left', position: 1, home: W('I'), away: T('I') },
+  { id: 'r32-78', round: 'round32', side: 'right', position: 1, home: R('E'), away: R('I') },
+  { id: 'r32-79', round: 'round32', side: 'right', position: 2, home: W('A'), away: T('A') },
+  { id: 'r32-80', round: 'round32', side: 'right', position: 3, home: W('L'), away: T('L') },
+  { id: 'r32-81', round: 'round32', side: 'left', position: 6, home: W('D'), away: T('D') },
+  { id: 'r32-82', round: 'round32', side: 'left', position: 7, home: W('G'), away: T('G') },
+  { id: 'r32-83', round: 'round32', side: 'left', position: 4, home: R('K'), away: R('L') },
+  { id: 'r32-84', round: 'round32', side: 'left', position: 5, home: W('H'), away: R('J') },
+  { id: 'r32-85', round: 'round32', side: 'right', position: 6, home: W('B'), away: T('B') },
+  { id: 'r32-86', round: 'round32', side: 'right', position: 4, home: W('J'), away: R('H') },
+  { id: 'r32-87', round: 'round32', side: 'right', position: 7, home: W('K'), away: T('K') },
+  { id: 'r32-88', round: 'round32', side: 'right', position: 5, home: R('D'), away: R('G') },
 ]
 
 // Octavos (8)
 const R16: TieDef[] = [
-  { id: 'r16-1', round: 'round16', side: 'left', position: 0, home: WO('r32-1'), away: WO('r32-2') },
-  { id: 'r16-2', round: 'round16', side: 'left', position: 1, home: WO('r32-3'), away: WO('r32-4') },
-  { id: 'r16-3', round: 'round16', side: 'left', position: 2, home: WO('r32-5'), away: WO('r32-6') },
-  { id: 'r16-4', round: 'round16', side: 'left', position: 3, home: WO('r32-7'), away: WO('r32-8') },
-  { id: 'r16-5', round: 'round16', side: 'right', position: 0, home: WO('r32-9'), away: WO('r32-10') },
-  { id: 'r16-6', round: 'round16', side: 'right', position: 1, home: WO('r32-11'), away: WO('r32-12') },
-  { id: 'r16-7', round: 'round16', side: 'right', position: 2, home: WO('r32-13'), away: WO('r32-14') },
-  { id: 'r16-8', round: 'round16', side: 'right', position: 3, home: WO('r32-15'), away: WO('r32-16') },
+  { id: 'r16-89', round: 'round16', side: 'left', position: 1, home: WO('r32-73'), away: WO('r32-75') },
+  { id: 'r16-90', round: 'round16', side: 'left', position: 0, home: WO('r32-74'), away: WO('r32-77') },
+  { id: 'r16-91', round: 'round16', side: 'right', position: 0, home: WO('r32-76'), away: WO('r32-78') },
+  { id: 'r16-92', round: 'round16', side: 'right', position: 1, home: WO('r32-79'), away: WO('r32-80') },
+  { id: 'r16-93', round: 'round16', side: 'left', position: 2, home: WO('r32-83'), away: WO('r32-84') },
+  { id: 'r16-94', round: 'round16', side: 'left', position: 3, home: WO('r32-81'), away: WO('r32-82') },
+  { id: 'r16-95', round: 'round16', side: 'right', position: 2, home: WO('r32-86'), away: WO('r32-88') },
+  { id: 'r16-96', round: 'round16', side: 'right', position: 3, home: WO('r32-85'), away: WO('r32-87') },
 ]
 
 // Cuartos (4)
 const QF: TieDef[] = [
-  { id: 'qf-1', round: 'quarter', side: 'left', position: 0, home: WO('r16-1'), away: WO('r16-2') },
-  { id: 'qf-2', round: 'quarter', side: 'left', position: 1, home: WO('r16-3'), away: WO('r16-4') },
-  { id: 'qf-3', round: 'quarter', side: 'right', position: 0, home: WO('r16-5'), away: WO('r16-6') },
-  { id: 'qf-4', round: 'quarter', side: 'right', position: 1, home: WO('r16-7'), away: WO('r16-8') },
+  { id: 'qf-97', round: 'quarter', side: 'left', position: 0, home: WO('r16-89'), away: WO('r16-90') },
+  { id: 'qf-98', round: 'quarter', side: 'left', position: 1, home: WO('r16-93'), away: WO('r16-94') },
+  { id: 'qf-99', round: 'quarter', side: 'right', position: 0, home: WO('r16-91'), away: WO('r16-92') },
+  { id: 'qf-100', round: 'quarter', side: 'right', position: 1, home: WO('r16-95'), away: WO('r16-96') },
 ]
 
 // Semifinales (2)
 const SF: TieDef[] = [
-  { id: 'sf-1', round: 'semi', side: 'left', position: 0, home: WO('qf-1'), away: WO('qf-2') },
-  { id: 'sf-2', round: 'semi', side: 'right', position: 0, home: WO('qf-3'), away: WO('qf-4') },
+  { id: 'sf-101', round: 'semi', side: 'left', position: 0, home: WO('qf-97'), away: WO('qf-98') },
+  { id: 'sf-102', round: 'semi', side: 'right', position: 0, home: WO('qf-99'), away: WO('qf-100') },
 ]
 
 // Tercer puesto y Final
 const FINALS: TieDef[] = [
-  { id: 'third', round: 'third', side: 'center', position: 0, home: LO('sf-1'), away: LO('sf-2') },
-  { id: 'final', round: 'final', side: 'center', position: 0, home: WO('sf-1'), away: WO('sf-2') },
+  { id: 'third', round: 'third', side: 'center', position: 0, home: LO('sf-101'), away: LO('sf-102') },
+  { id: 'final', round: 'final', side: 'center', position: 0, home: WO('sf-101'), away: WO('sf-102') },
 ]
 
 export const BRACKET: TieDef[] = [...R32, ...R16, ...QF, ...SF, ...FINALS]
