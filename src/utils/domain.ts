@@ -92,7 +92,28 @@ export function countByState(
   const all: Match[] = []
   if (data) {
     for (const g of data.groups) all.push(...g.matches)
-    for (const t of data.knockout) if (t.match) all.push(t.match)
+    for (const t of data.knockout) {
+      if (t.match) {
+        all.push(t.match)
+      } else if (t.kickoffUtc) {
+        all.push({
+          id: t.id,
+          stage: t.round,
+          homeTeam: t.homeTeam ?? null,
+          awayTeam: t.awayTeam ?? null,
+          homeScore: null,
+          awayScore: null,
+          penaltiesHome: null,
+          penaltiesAway: null,
+          status: 'scheduled',
+          minute: null,
+          kickoffUtc: t.kickoffUtc,
+          stadium: t.stadium,
+          city: t.city,
+          winnerTeamId: null,
+        })
+      }
+    }
   }
   return {
     total: all.length,
