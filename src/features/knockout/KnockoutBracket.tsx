@@ -6,6 +6,7 @@ import { KnockoutMatchCard } from './KnockoutMatchCard'
 import { TrophyCenterpiece } from '@/components/TrophyCenterpiece'
 import { Flag } from '@/components/Flag'
 import { formatDayArgentina, formatTimeArgentina } from '@/utils/date'
+import { BRACKET } from '@/utils/bracket'
 
 interface KnockoutBracketProps {
   ties: KnockoutTie[]
@@ -128,34 +129,179 @@ function MobileSlot({
   )
 }
 
+function MobileTeamToken({ team, muted = true }: { team: Team; muted?: boolean }) {
+  return (
+    <span
+      className={`inline-flex min-w-0 items-center gap-1 rounded-full bg-white/[0.04] px-1.5 py-1 ${
+        muted ? 'text-cream/45' : 'text-cream/75'
+      }`}
+      title={team.name}
+    >
+      <Flag team={team} size={14} className={muted ? 'grayscale opacity-55' : ''} />
+      <span className="max-w-[52px] truncate text-[0.64rem] font-semibold">{team.shortName}</span>
+    </span>
+  )
+}
+
+function MobileTeamVs({ home, away }: { home: Team | null; away: Team | null }) {
+  return (
+    <div className="flex min-w-0 items-center gap-1.5">
+      {home ? (
+        <MobileTeamToken team={home} />
+      ) : (
+        <span className="h-5 w-12 rounded-full bg-white/[0.04]" aria-hidden />
+      )}
+      <span className="text-[0.58rem] font-bold uppercase text-gold-200/45">vs</span>
+      {away ? (
+        <MobileTeamToken team={away} />
+      ) : (
+        <span className="h-5 w-12 rounded-full bg-white/[0.04]" aria-hidden />
+      )}
+    </div>
+  )
+}
+
+function MobileCandidateBlock({
+  sourceTie,
+  candidates,
+}: {
+  sourceTie: KnockoutTie | null
+  candidates: Team[]
+}) {
+  if (sourceTie?.homeTeam || sourceTie?.awayTeam) {
+    return (
+      <div className="rounded-lg border border-white/[0.06] bg-white/[0.025] px-2 py-1.5">
+        <MobileTeamVs home={sourceTie.homeTeam ?? null} away={sourceTie.awayTeam ?? null} />
+      </div>
+    )
+  }
+
+  return (
+    <div className="rounded-lg border border-white/[0.06] bg-white/[0.025] px-2 py-1.5">
+      <div className="mb-1 text-[0.58rem] font-semibold uppercase tracking-[0.08em] text-cream/30">
+        Posibles
+      </div>
+      <div className="flex flex-wrap gap-1">
+        {candidates.slice(0, 8).map((team) => (
+          <MobileTeamToken key={team.id} team={team} />
+        ))}
+        {candidates.length > 8 && (
+          <span className="inline-flex items-center rounded-full bg-white/[0.04] px-1.5 py-1 text-[0.64rem] font-semibold text-cream/35">
+            +{candidates.length - 8}
+          </span>
+        )}
+      </div>
+    </div>
+  )
+}
+
+function MobilePossibleSources({
+  tie,
+  tiesById,
+  sourceIdsByTieId,
+}: {
+  tie: KnockoutTie
+  tiesById: Map<string, KnockoutTie>
+  sourceIdsByTieId: Map<string, string[]>
+}) {
+  const getCandidates = (tieId: string, seen = new Set<string>()): Team[] => {
+    if (seen.has(tieId)) return []
+    seen.add(tieId)
+
+    const sourceTie = tiesById.get(tieId)
+    if (!sourceTie) return []
+
+    const directTeams = [sourceTie.homeTeam, sourceTie.awayTeam].filter(Boolean) as Team[]
+    if (directTeams.length > 0) return directTeams
+
+    const childIds = sourceIdsByTieId.get(tieId) ?? []
+    const byId = new Map<string, Team>()
+    for (const childId of childIds) {
+      for (const team of getCandidates(childId, seen)) {
+        byId.set(team.id, team)
+      }
+    }
+    return [...byId.values()]
+  }
+
+  const sourceIds = sourceIdsByTieId.get(tie.id) ?? []
+  if (sourceIds.length === 0) {
+    return (
+      <div className="mt-2 rounded-lg border border-white/[0.06] bg-white/[0.025] px-2 py-2 text-xs italic text-cream/35">
+        Por determinar
+      </div>
+    )
+  }
+
+  return (
+    <div className="mt-2 space-y-1.5">
+      {sourceIds.map((sourceId, index) => {
+        const sourceTie = tiesById.get(sourceId) ?? null
+        const candidates = getCandidates(sourceId)
+
+        return (
+          <div key={sourceId}>
+            {index === 1 && (
+              <div className="my-1 text-center text-[0.58rem] font-bold uppercase text-gold-200/45">
+                vs
+              </div>
+            )}
+            <MobileCandidateBlock sourceTie={sourceTie} candidates={candidates} />
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 function MobileBracketTie({
   tie,
   showTeams,
+  tiesById,
+  sourceIdsByTieId,
   className = '',
 }: {
   tie: KnockoutTie
   showTeams: boolean
+  tiesById: Map<string, KnockoutTie>
+  sourceIdsByTieId: Map<string, string[]>
   className?: string
 }) {
   return (
     <article
-      className={`relative h-[96px] overflow-hidden rounded-xl border border-white/10 bg-night-900/80 shadow-glass ${className}`}
+      className={`relative overflow-hidden rounded-xl border border-white/10 bg-night-900/80 shadow-glass ${
+        showTeams ? 'h-[96px]' : 'min-h-[126px] p-2'
+      } ${className}`}
     >
-      <div className="flex h-6 items-center px-2 text-[0.68rem] font-semibold text-cream/45">
+      <div
+        className={`flex h-6 items-center text-[0.68rem] font-semibold text-cream/45 ${
+          showTeams ? 'px-2' : 'px-0'
+        }`}
+      >
         <MobileTieDate tie={tie} />
       </div>
-      <MobileSlot
-        team={tie.homeTeam}
-        label={showTeams ? tie.sourceHome : 'Por determinar'}
-        showTeam={showTeams}
-        confirmed={tie.homeConfirmed}
-      />
-      <MobileSlot
-        team={tie.awayTeam}
-        label={showTeams ? tie.sourceAway : 'Por determinar'}
-        showTeam={showTeams}
-        confirmed={tie.awayConfirmed}
-      />
+      {showTeams ? (
+        <>
+          <MobileSlot
+            team={tie.homeTeam}
+            label={tie.sourceHome}
+            showTeam
+            confirmed={tie.homeConfirmed}
+          />
+          <MobileSlot
+            team={tie.awayTeam}
+            label={tie.sourceAway}
+            showTeam
+            confirmed={tie.awayConfirmed}
+          />
+        </>
+      ) : (
+        <MobilePossibleSources
+          tie={tie}
+          tiesById={tiesById}
+          sourceIdsByTieId={sourceIdsByTieId}
+        />
+      )}
     </article>
   )
 }
@@ -164,11 +310,15 @@ function MobileBracketColumn({
   title,
   ties,
   showTeams,
+  tiesById,
+  sourceIdsByTieId,
   className = '',
 }: {
   title: string
   ties: KnockoutTie[]
   showTeams: boolean
+  tiesById: Map<string, KnockoutTie>
+  sourceIdsByTieId: Map<string, string[]>
   className?: string
 }) {
   return (
@@ -176,76 +326,16 @@ function MobileBracketColumn({
       <h3 className="mb-2 text-center text-xs font-bold text-cream/75">{title}</h3>
       <div className="space-y-4">
         {ties.map((tie) => (
-          <MobileBracketTie key={tie.id} tie={tie} showTeams={showTeams} />
+          <MobileBracketTie
+            key={tie.id}
+            tie={tie}
+            showTeams={showTeams}
+            tiesById={tiesById}
+            sourceIdsByTieId={sourceIdsByTieId}
+          />
         ))}
       </div>
     </div>
-  )
-}
-
-const MOBILE_TIE_HEIGHT = 96
-const MOBILE_TIE_GAP = 16
-const MOBILE_TIE_STEP = MOBILE_TIE_HEIGHT + MOBILE_TIE_GAP
-const MOBILE_TIE_MIDPOINT = MOBILE_TIE_HEIGHT / 2
-
-function MobileConnectorRail({
-  sourceCount,
-  targetCount,
-  sourceOffset = 0,
-  targetOffset = 0,
-}: {
-  sourceCount: number
-  targetCount: number
-  sourceOffset?: number
-  targetOffset?: number
-}) {
-  const visibleSourceCount = Math.min(sourceCount, targetCount * 2)
-  const height =
-    Math.max(
-      sourceOffset + Math.max(sourceCount - 1, 0) * MOBILE_TIE_STEP + MOBILE_TIE_HEIGHT,
-      targetOffset + Math.max(targetCount - 1, 0) * MOBILE_TIE_STEP + MOBILE_TIE_HEIGHT,
-    ) + 8
-
-  return (
-    <svg
-      className="mt-8 w-10 shrink-0 overflow-visible"
-      width="40"
-      height={height}
-      viewBox={`0 0 40 ${height}`}
-      fill="none"
-      aria-hidden
-    >
-      {Array.from({ length: visibleSourceCount }, (_, sourceIndex) => {
-        const targetIndex = Math.floor(sourceIndex / 2)
-        const sourceY = sourceOffset + sourceIndex * MOBILE_TIE_STEP + MOBILE_TIE_MIDPOINT
-        const targetY = targetOffset + targetIndex * MOBILE_TIE_STEP + MOBILE_TIE_MIDPOINT
-        const busX = sourceIndex % 2 === 0 ? 20 : 26
-
-        return (
-          <path
-            key={sourceIndex}
-            d={`M0 ${sourceY} H${busX} V${targetY} H40`}
-            stroke="rgb(250 218 113 / 0.38)"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        )
-      })}
-      {Array.from({ length: targetCount }, (_, targetIndex) => {
-        const targetY = targetOffset + targetIndex * MOBILE_TIE_STEP + MOBILE_TIE_MIDPOINT
-
-        return (
-          <circle
-            key={targetIndex}
-            cx="40"
-            cy={targetY}
-            r="2"
-            fill="rgb(250 218 113 / 0.55)"
-          />
-        )
-      })}
-    </svg>
   )
 }
 
@@ -258,6 +348,15 @@ function MobileKnockoutBracket({ ties }: { ties: KnockoutTie[] }) {
   const quarters = pick('quarter')
   const semis = pick('semi')
   const final = pick('final')
+  const tiesById = new Map(ties.map((tie) => [tie.id, tie]))
+  const sourceIdsByTieId = new Map(
+    BRACKET.map((def) => [
+      def.id,
+      [def.home, def.away]
+        .filter((slot) => slot.kind === 'winnerOf' || slot.kind === 'loserOf')
+        .map((slot) => ('tieId' in slot ? slot.tieId : '')),
+    ]),
+  )
 
   return (
     <div className="-mx-4 sm:-mx-5">
@@ -304,35 +403,42 @@ function MobileKnockoutBracket({ ties }: { ties: KnockoutTie[] }) {
       </div>
 
       <div className="scroll-elegant mt-5 overflow-x-auto px-4 pb-4">
-        <div className="flex min-w-[1280px] items-start">
-          <MobileBracketColumn title="16vos." ties={round32} showTeams />
-          <MobileConnectorRail
-            sourceCount={round32.length}
-            targetCount={round16.length}
-            targetOffset={48}
+        <div className="flex min-w-[1420px] items-start gap-4">
+          <MobileBracketColumn
+            title="16vos."
+            ties={round32}
+            showTeams
+            tiesById={tiesById}
+            sourceIdsByTieId={sourceIdsByTieId}
           />
-          <MobileBracketColumn title="8vos." ties={round16} showTeams={false} className="pt-[48px]" />
-          <MobileConnectorRail
-            sourceCount={round16.length}
-            targetCount={quarters.length}
-            sourceOffset={48}
-            targetOffset={144}
+          <MobileBracketColumn
+            title="8vos."
+            ties={round16}
+            showTeams={false}
+            tiesById={tiesById}
+            sourceIdsByTieId={sourceIdsByTieId}
           />
-          <MobileBracketColumn title="CF" ties={quarters} showTeams={false} className="pt-[144px]" />
-          <MobileConnectorRail
-            sourceCount={quarters.length}
-            targetCount={semis.length}
-            sourceOffset={144}
-            targetOffset={240}
+          <MobileBracketColumn
+            title="CF"
+            ties={quarters}
+            showTeams={false}
+            tiesById={tiesById}
+            sourceIdsByTieId={sourceIdsByTieId}
           />
-          <MobileBracketColumn title="SF" ties={semis} showTeams={false} className="pt-[240px]" />
-          <MobileConnectorRail
-            sourceCount={semis.length}
-            targetCount={final.length}
-            sourceOffset={240}
-            targetOffset={336}
+          <MobileBracketColumn
+            title="SF"
+            ties={semis}
+            showTeams={false}
+            tiesById={tiesById}
+            sourceIdsByTieId={sourceIdsByTieId}
           />
-          <MobileBracketColumn title="Final" ties={final} showTeams={false} className="pt-[336px]" />
+          <MobileBracketColumn
+            title="Final"
+            ties={final}
+            showTeams={false}
+            tiesById={tiesById}
+            sourceIdsByTieId={sourceIdsByTieId}
+          />
         </div>
       </div>
     </div>
