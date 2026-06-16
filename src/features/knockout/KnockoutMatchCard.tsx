@@ -1,4 +1,4 @@
-import { Trophy } from 'lucide-react'
+import { MapPin, Trophy } from 'lucide-react'
 import type { KnockoutTie, Team } from '@/types'
 import { isLive } from '@/utils/domain'
 import { useResults } from '@/store/results'
@@ -90,6 +90,9 @@ export function KnockoutMatchCard({ tie, className = '', compact = false }: Knoc
   const live = match ? isLive(match) : false
   const finished = match?.status === 'finished'
   const played = !!match && (finished || live)
+  const kickoffUtc = match?.kickoffUtc ?? tie.kickoffUtc
+  const stadium = match?.stadium ?? tie.stadium
+  const city = match?.city ?? tie.city
 
   const homeWinner = !!finished && match?.winnerTeamId === homeTeam?.id
   const awayWinner = !!finished && match?.winnerTeamId === awayTeam?.id
@@ -153,10 +156,22 @@ export function KnockoutMatchCard({ tie, className = '', compact = false }: Knoc
         {match ? (
           <>
             <MatchStatusBadge match={match} />
-            <DateTimeArgentina kickoffUtc={match.kickoffUtc} />
+            <DateTimeArgentina kickoffUtc={kickoffUtc} />
           </>
         ) : (
-          <span className="text-[0.7rem] italic text-cream/40">A definir · Fecha a confirmar</span>
+          <>
+            <span className="text-[0.7rem] italic text-cream/40">A definir</span>
+            <DateTimeArgentina kickoffUtc={kickoffUtc} />
+          </>
+        )}
+        {stadium && (
+          <span className="inline-flex min-w-0 items-center gap-1 text-[0.7rem] text-cream/40">
+            <MapPin size={10} className="shrink-0" aria-hidden />
+            <span className="truncate">
+              {stadium}
+              {city ? ` · ${city}` : ''}
+            </span>
+          </span>
         )}
       </div>
     </div>
