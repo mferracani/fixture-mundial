@@ -85,6 +85,9 @@ export interface KnockoutTie {
   round: Stage
   side: BracketSide
   position: number // Orden dentro de la columna (de arriba hacia abajo)
+  kickoffUtc: string | null
+  stadium?: string
+  city?: string
   match: Match | null
   sourceHome: string // Placeholder legible: "Ganador Grupo A"
   sourceAway: string
