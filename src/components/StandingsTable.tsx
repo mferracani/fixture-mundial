@@ -44,7 +44,7 @@ function qualLabel(status: Standing['qualificationStatus']): string {
     case 'direct':
       return 'Clasifica a eliminatorias'
     case 'best-third':
-      return 'Puede clasificar según ranking de terceros'
+      return 'Entra como mejor tercero'
     case 'eliminated':
       return 'Sin chances de clasificación directa'
     default:
