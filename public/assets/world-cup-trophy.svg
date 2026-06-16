@@ -1,0 +1,42 @@
+<svg width="220" height="320" viewBox="0 0 220 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Trofeo de la Copa del Mundo">
+  <defs>
+    <linearGradient id="gold" x1="40" y1="20" x2="180" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f6ecc9"/>
+      <stop offset="0.45" stop-color="#d9b54a"/>
+      <stop offset="1" stop-color="#9a6f1d"/>
+    </linearGradient>
+    <linearGradient id="goldHi" x1="80" y1="30" x2="140" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fffaf0" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#e3c463" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#e3c463" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#e3c463" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <ellipse cx="110" cy="150" rx="105" ry="150" fill="url(#glow)"/>
+
+  <!-- Globo superior -->
+  <g>
+    <circle cx="110" cy="74" r="46" fill="url(#gold)"/>
+    <path d="M64 74h92M110 28v92M74 44c20 18 62 18 72 0M74 104c20-18 62-18 72 0M82 74c0-26 12-46 28-46s28 20 28 46-12 46-28 46-28-20-28-46Z"
+          stroke="#7a5512" stroke-width="2" stroke-opacity="0.5" fill="none"/>
+    <circle cx="110" cy="74" r="46" fill="url(#goldHi)"/>
+  </g>
+
+  <!-- Cuerpo / columna entrelazada -->
+  <path d="M110 120
+           C 86 132 78 162 96 196
+           C 108 218 110 232 110 248
+           C 110 232 112 218 124 196
+           C 142 162 134 132 110 120 Z"
+        fill="url(#gold)"/>
+  <path d="M110 124 C 92 136 86 162 100 192" stroke="url(#goldHi)" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.7"/>
+
+  <!-- Base -->
+  <path d="M84 248h52l-6 20H90l-6-20Z" fill="url(#gold)"/>
+  <rect x="72" y="268" width="76" height="14" rx="4" fill="url(#gold)"/>
+  <rect x="64" y="282" width="92" height="16" rx="5" fill="url(#gold)"/>
+  <rect x="64" y="282" width="92" height="5" rx="2.5" fill="#fffaf0" opacity="0.45"/>
+</svg>

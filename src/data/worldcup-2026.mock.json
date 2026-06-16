@@ -1,0 +1,3807 @@
+{
+  "groups": [
+    {
+      "id": "A",
+      "name": "Grupo A",
+      "teams": [
+        {
+          "id": "t-A-0",
+          "name": "México",
+          "shortName": "MEX",
+          "countryCode": "MX",
+          "flagEmoji": "🇲🇽",
+          "flagUrl": "https://flagcdn.com/mx.svg",
+          "groupId": "A"
+        },
+        {
+          "id": "t-A-1",
+          "name": "Sudáfrica",
+          "shortName": "RSA",
+          "countryCode": "ZA",
+          "flagEmoji": "🇿🇦",
+          "flagUrl": "https://flagcdn.com/za.svg",
+          "groupId": "A"
+        },
+        {
+          "id": "t-A-2",
+          "name": "Corea del Sur",
+          "shortName": "KOR",
+          "countryCode": "KR",
+          "flagEmoji": "🇰🇷",
+          "flagUrl": "https://flagcdn.com/kr.svg",
+          "groupId": "A"
+        },
+        {
+          "id": "t-A-3",
+          "name": "Chequia",
+          "shortName": "CZE",
+          "countryCode": "CZ",
+          "flagEmoji": "🇨🇿",
+          "flagUrl": "https://flagcdn.com/cz.svg",
+          "groupId": "A"
+        }
+      ],
+      "standings": [
+        {
+          "teamId": "t-A-0",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 1,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-A-1",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 2,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-A-2",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 3,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-A-3",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 4,
+          "qualificationStatus": "none"
+        }
+      ],
+      "matches": [
+        {
+          "id": "m-grp-001",
+          "stage": "group",
+          "groupId": "A",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-A-0",
+            "name": "México",
+            "shortName": "MEX",
+            "countryCode": "MX",
+            "flagEmoji": "🇲🇽",
+            "flagUrl": "https://flagcdn.com/mx.svg",
+            "groupId": "A"
+          },
+          "awayTeam": {
+            "id": "t-A-1",
+            "name": "Sudáfrica",
+            "shortName": "RSA",
+            "countryCode": "ZA",
+            "flagEmoji": "🇿🇦",
+            "flagUrl": "https://flagcdn.com/za.svg",
+            "groupId": "A"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-002",
+          "stage": "group",
+          "groupId": "A",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-A-0",
+            "name": "México",
+            "shortName": "MEX",
+            "countryCode": "MX",
+            "flagEmoji": "🇲🇽",
+            "flagUrl": "https://flagcdn.com/mx.svg",
+            "groupId": "A"
+          },
+          "awayTeam": {
+            "id": "t-A-2",
+            "name": "Corea del Sur",
+            "shortName": "KOR",
+            "countryCode": "KR",
+            "flagEmoji": "🇰🇷",
+            "flagUrl": "https://flagcdn.com/kr.svg",
+            "groupId": "A"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-003",
+          "stage": "group",
+          "groupId": "A",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-A-0",
+            "name": "México",
+            "shortName": "MEX",
+            "countryCode": "MX",
+            "flagEmoji": "🇲🇽",
+            "flagUrl": "https://flagcdn.com/mx.svg",
+            "groupId": "A"
+          },
+          "awayTeam": {
+            "id": "t-A-3",
+            "name": "Chequia",
+            "shortName": "CZE",
+            "countryCode": "CZ",
+            "flagEmoji": "🇨🇿",
+            "flagUrl": "https://flagcdn.com/cz.svg",
+            "groupId": "A"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-004",
+          "stage": "group",
+          "groupId": "A",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-A-1",
+            "name": "Sudáfrica",
+            "shortName": "RSA",
+            "countryCode": "ZA",
+            "flagEmoji": "🇿🇦",
+            "flagUrl": "https://flagcdn.com/za.svg",
+            "groupId": "A"
+          },
+          "awayTeam": {
+            "id": "t-A-2",
+            "name": "Corea del Sur",
+            "shortName": "KOR",
+            "countryCode": "KR",
+            "flagEmoji": "🇰🇷",
+            "flagUrl": "https://flagcdn.com/kr.svg",
+            "groupId": "A"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-005",
+          "stage": "group",
+          "groupId": "A",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-A-1",
+            "name": "Sudáfrica",
+            "shortName": "RSA",
+            "countryCode": "ZA",
+            "flagEmoji": "🇿🇦",
+            "flagUrl": "https://flagcdn.com/za.svg",
+            "groupId": "A"
+          },
+          "awayTeam": {
+            "id": "t-A-3",
+            "name": "Chequia",
+            "shortName": "CZE",
+            "countryCode": "CZ",
+            "flagEmoji": "🇨🇿",
+            "flagUrl": "https://flagcdn.com/cz.svg",
+            "groupId": "A"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-006",
+          "stage": "group",
+          "groupId": "A",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-A-2",
+            "name": "Corea del Sur",
+            "shortName": "KOR",
+            "countryCode": "KR",
+            "flagEmoji": "🇰🇷",
+            "flagUrl": "https://flagcdn.com/kr.svg",
+            "groupId": "A"
+          },
+          "awayTeam": {
+            "id": "t-A-3",
+            "name": "Chequia",
+            "shortName": "CZE",
+            "countryCode": "CZ",
+            "flagEmoji": "🇨🇿",
+            "flagUrl": "https://flagcdn.com/cz.svg",
+            "groupId": "A"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "name": "Grupo B",
+      "teams": [
+        {
+          "id": "t-B-0",
+          "name": "Canadá",
+          "shortName": "CAN",
+          "countryCode": "CA",
+          "flagEmoji": "🇨🇦",
+          "flagUrl": "https://flagcdn.com/ca.svg",
+          "groupId": "B"
+        },
+        {
+          "id": "t-B-1",
+          "name": "Bosnia y Herzegovina",
+          "shortName": "BIH",
+          "countryCode": "BA",
+          "flagEmoji": "🇧🇦",
+          "flagUrl": "https://flagcdn.com/ba.svg",
+          "groupId": "B"
+        },
+        {
+          "id": "t-B-2",
+          "name": "Catar",
+          "shortName": "QAT",
+          "countryCode": "QA",
+          "flagEmoji": "🇶🇦",
+          "flagUrl": "https://flagcdn.com/qa.svg",
+          "groupId": "B"
+        },
+        {
+          "id": "t-B-3",
+          "name": "Suiza",
+          "shortName": "SUI",
+          "countryCode": "CH",
+          "flagEmoji": "🇨🇭",
+          "flagUrl": "https://flagcdn.com/ch.svg",
+          "groupId": "B"
+        }
+      ],
+      "standings": [
+        {
+          "teamId": "t-B-0",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 1,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-B-1",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 2,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-B-2",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 3,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-B-3",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 4,
+          "qualificationStatus": "none"
+        }
+      ],
+      "matches": [
+        {
+          "id": "m-grp-007",
+          "stage": "group",
+          "groupId": "B",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-B-0",
+            "name": "Canadá",
+            "shortName": "CAN",
+            "countryCode": "CA",
+            "flagEmoji": "🇨🇦",
+            "flagUrl": "https://flagcdn.com/ca.svg",
+            "groupId": "B"
+          },
+          "awayTeam": {
+            "id": "t-B-1",
+            "name": "Bosnia y Herzegovina",
+            "shortName": "BIH",
+            "countryCode": "BA",
+            "flagEmoji": "🇧🇦",
+            "flagUrl": "https://flagcdn.com/ba.svg",
+            "groupId": "B"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-008",
+          "stage": "group",
+          "groupId": "B",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-B-0",
+            "name": "Canadá",
+            "shortName": "CAN",
+            "countryCode": "CA",
+            "flagEmoji": "🇨🇦",
+            "flagUrl": "https://flagcdn.com/ca.svg",
+            "groupId": "B"
+          },
+          "awayTeam": {
+            "id": "t-B-2",
+            "name": "Catar",
+            "shortName": "QAT",
+            "countryCode": "QA",
+            "flagEmoji": "🇶🇦",
+            "flagUrl": "https://flagcdn.com/qa.svg",
+            "groupId": "B"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-009",
+          "stage": "group",
+          "groupId": "B",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-B-0",
+            "name": "Canadá",
+            "shortName": "CAN",
+            "countryCode": "CA",
+            "flagEmoji": "🇨🇦",
+            "flagUrl": "https://flagcdn.com/ca.svg",
+            "groupId": "B"
+          },
+          "awayTeam": {
+            "id": "t-B-3",
+            "name": "Suiza",
+            "shortName": "SUI",
+            "countryCode": "CH",
+            "flagEmoji": "🇨🇭",
+            "flagUrl": "https://flagcdn.com/ch.svg",
+            "groupId": "B"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-010",
+          "stage": "group",
+          "groupId": "B",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-B-1",
+            "name": "Bosnia y Herzegovina",
+            "shortName": "BIH",
+            "countryCode": "BA",
+            "flagEmoji": "🇧🇦",
+            "flagUrl": "https://flagcdn.com/ba.svg",
+            "groupId": "B"
+          },
+          "awayTeam": {
+            "id": "t-B-2",
+            "name": "Catar",
+            "shortName": "QAT",
+            "countryCode": "QA",
+            "flagEmoji": "🇶🇦",
+            "flagUrl": "https://flagcdn.com/qa.svg",
+            "groupId": "B"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-011",
+          "stage": "group",
+          "groupId": "B",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-B-1",
+            "name": "Bosnia y Herzegovina",
+            "shortName": "BIH",
+            "countryCode": "BA",
+            "flagEmoji": "🇧🇦",
+            "flagUrl": "https://flagcdn.com/ba.svg",
+            "groupId": "B"
+          },
+          "awayTeam": {
+            "id": "t-B-3",
+            "name": "Suiza",
+            "shortName": "SUI",
+            "countryCode": "CH",
+            "flagEmoji": "🇨🇭",
+            "flagUrl": "https://flagcdn.com/ch.svg",
+            "groupId": "B"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-012",
+          "stage": "group",
+          "groupId": "B",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-B-2",
+            "name": "Catar",
+            "shortName": "QAT",
+            "countryCode": "QA",
+            "flagEmoji": "🇶🇦",
+            "flagUrl": "https://flagcdn.com/qa.svg",
+            "groupId": "B"
+          },
+          "awayTeam": {
+            "id": "t-B-3",
+            "name": "Suiza",
+            "shortName": "SUI",
+            "countryCode": "CH",
+            "flagEmoji": "🇨🇭",
+            "flagUrl": "https://flagcdn.com/ch.svg",
+            "groupId": "B"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "name": "Grupo C",
+      "teams": [
+        {
+          "id": "t-C-0",
+          "name": "Brasil",
+          "shortName": "BRA",
+          "countryCode": "BR",
+          "flagEmoji": "🇧🇷",
+          "flagUrl": "https://flagcdn.com/br.svg",
+          "groupId": "C"
+        },
+        {
+          "id": "t-C-1",
+          "name": "Marruecos",
+          "shortName": "MAR",
+          "countryCode": "MA",
+          "flagEmoji": "🇲🇦",
+          "flagUrl": "https://flagcdn.com/ma.svg",
+          "groupId": "C"
+        },
+        {
+          "id": "t-C-2",
+          "name": "Haití",
+          "shortName": "HAI",
+          "countryCode": "HT",
+          "flagEmoji": "🇭🇹",
+          "flagUrl": "https://flagcdn.com/ht.svg",
+          "groupId": "C"
+        },
+        {
+          "id": "t-C-3",
+          "name": "Escocia",
+          "shortName": "SCO",
+          "countryCode": "GB",
+          "flagEmoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+          "flagUrl": "https://flagcdn.com/gb-sct.svg",
+          "groupId": "C"
+        }
+      ],
+      "standings": [
+        {
+          "teamId": "t-C-0",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 1,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-C-1",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 2,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-C-2",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 3,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-C-3",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 4,
+          "qualificationStatus": "none"
+        }
+      ],
+      "matches": [
+        {
+          "id": "m-grp-013",
+          "stage": "group",
+          "groupId": "C",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-C-0",
+            "name": "Brasil",
+            "shortName": "BRA",
+            "countryCode": "BR",
+            "flagEmoji": "🇧🇷",
+            "flagUrl": "https://flagcdn.com/br.svg",
+            "groupId": "C"
+          },
+          "awayTeam": {
+            "id": "t-C-1",
+            "name": "Marruecos",
+            "shortName": "MAR",
+            "countryCode": "MA",
+            "flagEmoji": "🇲🇦",
+            "flagUrl": "https://flagcdn.com/ma.svg",
+            "groupId": "C"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-014",
+          "stage": "group",
+          "groupId": "C",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-C-0",
+            "name": "Brasil",
+            "shortName": "BRA",
+            "countryCode": "BR",
+            "flagEmoji": "🇧🇷",
+            "flagUrl": "https://flagcdn.com/br.svg",
+            "groupId": "C"
+          },
+          "awayTeam": {
+            "id": "t-C-2",
+            "name": "Haití",
+            "shortName": "HAI",
+            "countryCode": "HT",
+            "flagEmoji": "🇭🇹",
+            "flagUrl": "https://flagcdn.com/ht.svg",
+            "groupId": "C"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-015",
+          "stage": "group",
+          "groupId": "C",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-C-0",
+            "name": "Brasil",
+            "shortName": "BRA",
+            "countryCode": "BR",
+            "flagEmoji": "🇧🇷",
+            "flagUrl": "https://flagcdn.com/br.svg",
+            "groupId": "C"
+          },
+          "awayTeam": {
+            "id": "t-C-3",
+            "name": "Escocia",
+            "shortName": "SCO",
+            "countryCode": "GB",
+            "flagEmoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+            "flagUrl": "https://flagcdn.com/gb-sct.svg",
+            "groupId": "C"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-016",
+          "stage": "group",
+          "groupId": "C",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-C-1",
+            "name": "Marruecos",
+            "shortName": "MAR",
+            "countryCode": "MA",
+            "flagEmoji": "🇲🇦",
+            "flagUrl": "https://flagcdn.com/ma.svg",
+            "groupId": "C"
+          },
+          "awayTeam": {
+            "id": "t-C-2",
+            "name": "Haití",
+            "shortName": "HAI",
+            "countryCode": "HT",
+            "flagEmoji": "🇭🇹",
+            "flagUrl": "https://flagcdn.com/ht.svg",
+            "groupId": "C"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-017",
+          "stage": "group",
+          "groupId": "C",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-C-1",
+            "name": "Marruecos",
+            "shortName": "MAR",
+            "countryCode": "MA",
+            "flagEmoji": "🇲🇦",
+            "flagUrl": "https://flagcdn.com/ma.svg",
+            "groupId": "C"
+          },
+          "awayTeam": {
+            "id": "t-C-3",
+            "name": "Escocia",
+            "shortName": "SCO",
+            "countryCode": "GB",
+            "flagEmoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+            "flagUrl": "https://flagcdn.com/gb-sct.svg",
+            "groupId": "C"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-018",
+          "stage": "group",
+          "groupId": "C",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-C-2",
+            "name": "Haití",
+            "shortName": "HAI",
+            "countryCode": "HT",
+            "flagEmoji": "🇭🇹",
+            "flagUrl": "https://flagcdn.com/ht.svg",
+            "groupId": "C"
+          },
+          "awayTeam": {
+            "id": "t-C-3",
+            "name": "Escocia",
+            "shortName": "SCO",
+            "countryCode": "GB",
+            "flagEmoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+            "flagUrl": "https://flagcdn.com/gb-sct.svg",
+            "groupId": "C"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "name": "Grupo D",
+      "teams": [
+        {
+          "id": "t-D-0",
+          "name": "Estados Unidos",
+          "shortName": "USA",
+          "countryCode": "US",
+          "flagEmoji": "🇺🇸",
+          "flagUrl": "https://flagcdn.com/us.svg",
+          "groupId": "D"
+        },
+        {
+          "id": "t-D-1",
+          "name": "Paraguay",
+          "shortName": "PAR",
+          "countryCode": "PY",
+          "flagEmoji": "🇵🇾",
+          "flagUrl": "https://flagcdn.com/py.svg",
+          "groupId": "D"
+        },
+        {
+          "id": "t-D-2",
+          "name": "Australia",
+          "shortName": "AUS",
+          "countryCode": "AU",
+          "flagEmoji": "🇦🇺",
+          "flagUrl": "https://flagcdn.com/au.svg",
+          "groupId": "D"
+        },
+        {
+          "id": "t-D-3",
+          "name": "Turquía",
+          "shortName": "TUR",
+          "countryCode": "TR",
+          "flagEmoji": "🇹🇷",
+          "flagUrl": "https://flagcdn.com/tr.svg",
+          "groupId": "D"
+        }
+      ],
+      "standings": [
+        {
+          "teamId": "t-D-0",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 1,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-D-1",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 2,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-D-2",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 3,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-D-3",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 4,
+          "qualificationStatus": "none"
+        }
+      ],
+      "matches": [
+        {
+          "id": "m-grp-019",
+          "stage": "group",
+          "groupId": "D",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-D-0",
+            "name": "Estados Unidos",
+            "shortName": "USA",
+            "countryCode": "US",
+            "flagEmoji": "🇺🇸",
+            "flagUrl": "https://flagcdn.com/us.svg",
+            "groupId": "D"
+          },
+          "awayTeam": {
+            "id": "t-D-1",
+            "name": "Paraguay",
+            "shortName": "PAR",
+            "countryCode": "PY",
+            "flagEmoji": "🇵🇾",
+            "flagUrl": "https://flagcdn.com/py.svg",
+            "groupId": "D"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-020",
+          "stage": "group",
+          "groupId": "D",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-D-0",
+            "name": "Estados Unidos",
+            "shortName": "USA",
+            "countryCode": "US",
+            "flagEmoji": "🇺🇸",
+            "flagUrl": "https://flagcdn.com/us.svg",
+            "groupId": "D"
+          },
+          "awayTeam": {
+            "id": "t-D-2",
+            "name": "Australia",
+            "shortName": "AUS",
+            "countryCode": "AU",
+            "flagEmoji": "🇦🇺",
+            "flagUrl": "https://flagcdn.com/au.svg",
+            "groupId": "D"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-021",
+          "stage": "group",
+          "groupId": "D",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-D-0",
+            "name": "Estados Unidos",
+            "shortName": "USA",
+            "countryCode": "US",
+            "flagEmoji": "🇺🇸",
+            "flagUrl": "https://flagcdn.com/us.svg",
+            "groupId": "D"
+          },
+          "awayTeam": {
+            "id": "t-D-3",
+            "name": "Turquía",
+            "shortName": "TUR",
+            "countryCode": "TR",
+            "flagEmoji": "🇹🇷",
+            "flagUrl": "https://flagcdn.com/tr.svg",
+            "groupId": "D"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-022",
+          "stage": "group",
+          "groupId": "D",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-D-1",
+            "name": "Paraguay",
+            "shortName": "PAR",
+            "countryCode": "PY",
+            "flagEmoji": "🇵🇾",
+            "flagUrl": "https://flagcdn.com/py.svg",
+            "groupId": "D"
+          },
+          "awayTeam": {
+            "id": "t-D-2",
+            "name": "Australia",
+            "shortName": "AUS",
+            "countryCode": "AU",
+            "flagEmoji": "🇦🇺",
+            "flagUrl": "https://flagcdn.com/au.svg",
+            "groupId": "D"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-023",
+          "stage": "group",
+          "groupId": "D",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-D-1",
+            "name": "Paraguay",
+            "shortName": "PAR",
+            "countryCode": "PY",
+            "flagEmoji": "🇵🇾",
+            "flagUrl": "https://flagcdn.com/py.svg",
+            "groupId": "D"
+          },
+          "awayTeam": {
+            "id": "t-D-3",
+            "name": "Turquía",
+            "shortName": "TUR",
+            "countryCode": "TR",
+            "flagEmoji": "🇹🇷",
+            "flagUrl": "https://flagcdn.com/tr.svg",
+            "groupId": "D"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-024",
+          "stage": "group",
+          "groupId": "D",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-D-2",
+            "name": "Australia",
+            "shortName": "AUS",
+            "countryCode": "AU",
+            "flagEmoji": "🇦🇺",
+            "flagUrl": "https://flagcdn.com/au.svg",
+            "groupId": "D"
+          },
+          "awayTeam": {
+            "id": "t-D-3",
+            "name": "Turquía",
+            "shortName": "TUR",
+            "countryCode": "TR",
+            "flagEmoji": "🇹🇷",
+            "flagUrl": "https://flagcdn.com/tr.svg",
+            "groupId": "D"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "name": "Grupo E",
+      "teams": [
+        {
+          "id": "t-E-0",
+          "name": "Alemania",
+          "shortName": "GER",
+          "countryCode": "DE",
+          "flagEmoji": "🇩🇪",
+          "flagUrl": "https://flagcdn.com/de.svg",
+          "groupId": "E"
+        },
+        {
+          "id": "t-E-1",
+          "name": "Curazao",
+          "shortName": "CUW",
+          "countryCode": "CW",
+          "flagEmoji": "🇨🇼",
+          "flagUrl": "https://flagcdn.com/cw.svg",
+          "groupId": "E"
+        },
+        {
+          "id": "t-E-2",
+          "name": "Costa de Marfil",
+          "shortName": "CIV",
+          "countryCode": "CI",
+          "flagEmoji": "🇨🇮",
+          "flagUrl": "https://flagcdn.com/ci.svg",
+          "groupId": "E"
+        },
+        {
+          "id": "t-E-3",
+          "name": "Ecuador",
+          "shortName": "ECU",
+          "countryCode": "EC",
+          "flagEmoji": "🇪🇨",
+          "flagUrl": "https://flagcdn.com/ec.svg",
+          "groupId": "E"
+        }
+      ],
+      "standings": [
+        {
+          "teamId": "t-E-0",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 1,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-E-1",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 2,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-E-2",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 3,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-E-3",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 4,
+          "qualificationStatus": "none"
+        }
+      ],
+      "matches": [
+        {
+          "id": "m-grp-025",
+          "stage": "group",
+          "groupId": "E",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-E-0",
+            "name": "Alemania",
+            "shortName": "GER",
+            "countryCode": "DE",
+            "flagEmoji": "🇩🇪",
+            "flagUrl": "https://flagcdn.com/de.svg",
+            "groupId": "E"
+          },
+          "awayTeam": {
+            "id": "t-E-1",
+            "name": "Curazao",
+            "shortName": "CUW",
+            "countryCode": "CW",
+            "flagEmoji": "🇨🇼",
+            "flagUrl": "https://flagcdn.com/cw.svg",
+            "groupId": "E"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-026",
+          "stage": "group",
+          "groupId": "E",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-E-0",
+            "name": "Alemania",
+            "shortName": "GER",
+            "countryCode": "DE",
+            "flagEmoji": "🇩🇪",
+            "flagUrl": "https://flagcdn.com/de.svg",
+            "groupId": "E"
+          },
+          "awayTeam": {
+            "id": "t-E-2",
+            "name": "Costa de Marfil",
+            "shortName": "CIV",
+            "countryCode": "CI",
+            "flagEmoji": "🇨🇮",
+            "flagUrl": "https://flagcdn.com/ci.svg",
+            "groupId": "E"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-027",
+          "stage": "group",
+          "groupId": "E",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-E-0",
+            "name": "Alemania",
+            "shortName": "GER",
+            "countryCode": "DE",
+            "flagEmoji": "🇩🇪",
+            "flagUrl": "https://flagcdn.com/de.svg",
+            "groupId": "E"
+          },
+          "awayTeam": {
+            "id": "t-E-3",
+            "name": "Ecuador",
+            "shortName": "ECU",
+            "countryCode": "EC",
+            "flagEmoji": "🇪🇨",
+            "flagUrl": "https://flagcdn.com/ec.svg",
+            "groupId": "E"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-028",
+          "stage": "group",
+          "groupId": "E",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-E-1",
+            "name": "Curazao",
+            "shortName": "CUW",
+            "countryCode": "CW",
+            "flagEmoji": "🇨🇼",
+            "flagUrl": "https://flagcdn.com/cw.svg",
+            "groupId": "E"
+          },
+          "awayTeam": {
+            "id": "t-E-2",
+            "name": "Costa de Marfil",
+            "shortName": "CIV",
+            "countryCode": "CI",
+            "flagEmoji": "🇨🇮",
+            "flagUrl": "https://flagcdn.com/ci.svg",
+            "groupId": "E"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-029",
+          "stage": "group",
+          "groupId": "E",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-E-1",
+            "name": "Curazao",
+            "shortName": "CUW",
+            "countryCode": "CW",
+            "flagEmoji": "🇨🇼",
+            "flagUrl": "https://flagcdn.com/cw.svg",
+            "groupId": "E"
+          },
+          "awayTeam": {
+            "id": "t-E-3",
+            "name": "Ecuador",
+            "shortName": "ECU",
+            "countryCode": "EC",
+            "flagEmoji": "🇪🇨",
+            "flagUrl": "https://flagcdn.com/ec.svg",
+            "groupId": "E"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-030",
+          "stage": "group",
+          "groupId": "E",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-E-2",
+            "name": "Costa de Marfil",
+            "shortName": "CIV",
+            "countryCode": "CI",
+            "flagEmoji": "🇨🇮",
+            "flagUrl": "https://flagcdn.com/ci.svg",
+            "groupId": "E"
+          },
+          "awayTeam": {
+            "id": "t-E-3",
+            "name": "Ecuador",
+            "shortName": "ECU",
+            "countryCode": "EC",
+            "flagEmoji": "🇪🇨",
+            "flagUrl": "https://flagcdn.com/ec.svg",
+            "groupId": "E"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "name": "Grupo F",
+      "teams": [
+        {
+          "id": "t-F-0",
+          "name": "Países Bajos",
+          "shortName": "NED",
+          "countryCode": "NL",
+          "flagEmoji": "🇳🇱",
+          "flagUrl": "https://flagcdn.com/nl.svg",
+          "groupId": "F"
+        },
+        {
+          "id": "t-F-1",
+          "name": "Japón",
+          "shortName": "JPN",
+          "countryCode": "JP",
+          "flagEmoji": "🇯🇵",
+          "flagUrl": "https://flagcdn.com/jp.svg",
+          "groupId": "F"
+        },
+        {
+          "id": "t-F-2",
+          "name": "Suecia",
+          "shortName": "SWE",
+          "countryCode": "SE",
+          "flagEmoji": "🇸🇪",
+          "flagUrl": "https://flagcdn.com/se.svg",
+          "groupId": "F"
+        },
+        {
+          "id": "t-F-3",
+          "name": "Túnez",
+          "shortName": "TUN",
+          "countryCode": "TN",
+          "flagEmoji": "🇹🇳",
+          "flagUrl": "https://flagcdn.com/tn.svg",
+          "groupId": "F"
+        }
+      ],
+      "standings": [
+        {
+          "teamId": "t-F-0",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 1,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-F-1",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 2,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-F-2",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 3,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-F-3",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 4,
+          "qualificationStatus": "none"
+        }
+      ],
+      "matches": [
+        {
+          "id": "m-grp-031",
+          "stage": "group",
+          "groupId": "F",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-F-0",
+            "name": "Países Bajos",
+            "shortName": "NED",
+            "countryCode": "NL",
+            "flagEmoji": "🇳🇱",
+            "flagUrl": "https://flagcdn.com/nl.svg",
+            "groupId": "F"
+          },
+          "awayTeam": {
+            "id": "t-F-1",
+            "name": "Japón",
+            "shortName": "JPN",
+            "countryCode": "JP",
+            "flagEmoji": "🇯🇵",
+            "flagUrl": "https://flagcdn.com/jp.svg",
+            "groupId": "F"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-032",
+          "stage": "group",
+          "groupId": "F",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-F-0",
+            "name": "Países Bajos",
+            "shortName": "NED",
+            "countryCode": "NL",
+            "flagEmoji": "🇳🇱",
+            "flagUrl": "https://flagcdn.com/nl.svg",
+            "groupId": "F"
+          },
+          "awayTeam": {
+            "id": "t-F-2",
+            "name": "Suecia",
+            "shortName": "SWE",
+            "countryCode": "SE",
+            "flagEmoji": "🇸🇪",
+            "flagUrl": "https://flagcdn.com/se.svg",
+            "groupId": "F"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-033",
+          "stage": "group",
+          "groupId": "F",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-F-0",
+            "name": "Países Bajos",
+            "shortName": "NED",
+            "countryCode": "NL",
+            "flagEmoji": "🇳🇱",
+            "flagUrl": "https://flagcdn.com/nl.svg",
+            "groupId": "F"
+          },
+          "awayTeam": {
+            "id": "t-F-3",
+            "name": "Túnez",
+            "shortName": "TUN",
+            "countryCode": "TN",
+            "flagEmoji": "🇹🇳",
+            "flagUrl": "https://flagcdn.com/tn.svg",
+            "groupId": "F"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-034",
+          "stage": "group",
+          "groupId": "F",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-F-1",
+            "name": "Japón",
+            "shortName": "JPN",
+            "countryCode": "JP",
+            "flagEmoji": "🇯🇵",
+            "flagUrl": "https://flagcdn.com/jp.svg",
+            "groupId": "F"
+          },
+          "awayTeam": {
+            "id": "t-F-2",
+            "name": "Suecia",
+            "shortName": "SWE",
+            "countryCode": "SE",
+            "flagEmoji": "🇸🇪",
+            "flagUrl": "https://flagcdn.com/se.svg",
+            "groupId": "F"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-035",
+          "stage": "group",
+          "groupId": "F",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-F-1",
+            "name": "Japón",
+            "shortName": "JPN",
+            "countryCode": "JP",
+            "flagEmoji": "🇯🇵",
+            "flagUrl": "https://flagcdn.com/jp.svg",
+            "groupId": "F"
+          },
+          "awayTeam": {
+            "id": "t-F-3",
+            "name": "Túnez",
+            "shortName": "TUN",
+            "countryCode": "TN",
+            "flagEmoji": "🇹🇳",
+            "flagUrl": "https://flagcdn.com/tn.svg",
+            "groupId": "F"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-036",
+          "stage": "group",
+          "groupId": "F",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-F-2",
+            "name": "Suecia",
+            "shortName": "SWE",
+            "countryCode": "SE",
+            "flagEmoji": "🇸🇪",
+            "flagUrl": "https://flagcdn.com/se.svg",
+            "groupId": "F"
+          },
+          "awayTeam": {
+            "id": "t-F-3",
+            "name": "Túnez",
+            "shortName": "TUN",
+            "countryCode": "TN",
+            "flagEmoji": "🇹🇳",
+            "flagUrl": "https://flagcdn.com/tn.svg",
+            "groupId": "F"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "name": "Grupo G",
+      "teams": [
+        {
+          "id": "t-G-0",
+          "name": "Bélgica",
+          "shortName": "BEL",
+          "countryCode": "BE",
+          "flagEmoji": "🇧🇪",
+          "flagUrl": "https://flagcdn.com/be.svg",
+          "groupId": "G"
+        },
+        {
+          "id": "t-G-1",
+          "name": "Egipto",
+          "shortName": "EGY",
+          "countryCode": "EG",
+          "flagEmoji": "🇪🇬",
+          "flagUrl": "https://flagcdn.com/eg.svg",
+          "groupId": "G"
+        },
+        {
+          "id": "t-G-2",
+          "name": "Irán",
+          "shortName": "IRN",
+          "countryCode": "IR",
+          "flagEmoji": "🇮🇷",
+          "flagUrl": "https://flagcdn.com/ir.svg",
+          "groupId": "G"
+        },
+        {
+          "id": "t-G-3",
+          "name": "Nueva Zelanda",
+          "shortName": "NZL",
+          "countryCode": "NZ",
+          "flagEmoji": "🇳🇿",
+          "flagUrl": "https://flagcdn.com/nz.svg",
+          "groupId": "G"
+        }
+      ],
+      "standings": [
+        {
+          "teamId": "t-G-0",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 1,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-G-1",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 2,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-G-2",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 3,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-G-3",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 4,
+          "qualificationStatus": "none"
+        }
+      ],
+      "matches": [
+        {
+          "id": "m-grp-037",
+          "stage": "group",
+          "groupId": "G",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-G-0",
+            "name": "Bélgica",
+            "shortName": "BEL",
+            "countryCode": "BE",
+            "flagEmoji": "🇧🇪",
+            "flagUrl": "https://flagcdn.com/be.svg",
+            "groupId": "G"
+          },
+          "awayTeam": {
+            "id": "t-G-1",
+            "name": "Egipto",
+            "shortName": "EGY",
+            "countryCode": "EG",
+            "flagEmoji": "🇪🇬",
+            "flagUrl": "https://flagcdn.com/eg.svg",
+            "groupId": "G"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-038",
+          "stage": "group",
+          "groupId": "G",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-G-0",
+            "name": "Bélgica",
+            "shortName": "BEL",
+            "countryCode": "BE",
+            "flagEmoji": "🇧🇪",
+            "flagUrl": "https://flagcdn.com/be.svg",
+            "groupId": "G"
+          },
+          "awayTeam": {
+            "id": "t-G-2",
+            "name": "Irán",
+            "shortName": "IRN",
+            "countryCode": "IR",
+            "flagEmoji": "🇮🇷",
+            "flagUrl": "https://flagcdn.com/ir.svg",
+            "groupId": "G"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-039",
+          "stage": "group",
+          "groupId": "G",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-G-0",
+            "name": "Bélgica",
+            "shortName": "BEL",
+            "countryCode": "BE",
+            "flagEmoji": "🇧🇪",
+            "flagUrl": "https://flagcdn.com/be.svg",
+            "groupId": "G"
+          },
+          "awayTeam": {
+            "id": "t-G-3",
+            "name": "Nueva Zelanda",
+            "shortName": "NZL",
+            "countryCode": "NZ",
+            "flagEmoji": "🇳🇿",
+            "flagUrl": "https://flagcdn.com/nz.svg",
+            "groupId": "G"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-040",
+          "stage": "group",
+          "groupId": "G",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-G-1",
+            "name": "Egipto",
+            "shortName": "EGY",
+            "countryCode": "EG",
+            "flagEmoji": "🇪🇬",
+            "flagUrl": "https://flagcdn.com/eg.svg",
+            "groupId": "G"
+          },
+          "awayTeam": {
+            "id": "t-G-2",
+            "name": "Irán",
+            "shortName": "IRN",
+            "countryCode": "IR",
+            "flagEmoji": "🇮🇷",
+            "flagUrl": "https://flagcdn.com/ir.svg",
+            "groupId": "G"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-041",
+          "stage": "group",
+          "groupId": "G",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-G-1",
+            "name": "Egipto",
+            "shortName": "EGY",
+            "countryCode": "EG",
+            "flagEmoji": "🇪🇬",
+            "flagUrl": "https://flagcdn.com/eg.svg",
+            "groupId": "G"
+          },
+          "awayTeam": {
+            "id": "t-G-3",
+            "name": "Nueva Zelanda",
+            "shortName": "NZL",
+            "countryCode": "NZ",
+            "flagEmoji": "🇳🇿",
+            "flagUrl": "https://flagcdn.com/nz.svg",
+            "groupId": "G"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-042",
+          "stage": "group",
+          "groupId": "G",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-G-2",
+            "name": "Irán",
+            "shortName": "IRN",
+            "countryCode": "IR",
+            "flagEmoji": "🇮🇷",
+            "flagUrl": "https://flagcdn.com/ir.svg",
+            "groupId": "G"
+          },
+          "awayTeam": {
+            "id": "t-G-3",
+            "name": "Nueva Zelanda",
+            "shortName": "NZL",
+            "countryCode": "NZ",
+            "flagEmoji": "🇳🇿",
+            "flagUrl": "https://flagcdn.com/nz.svg",
+            "groupId": "G"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        }
+      ]
+    },
+    {
+      "id": "H",
+      "name": "Grupo H",
+      "teams": [
+        {
+          "id": "t-H-0",
+          "name": "España",
+          "shortName": "ESP",
+          "countryCode": "ES",
+          "flagEmoji": "🇪🇸",
+          "flagUrl": "https://flagcdn.com/es.svg",
+          "groupId": "H"
+        },
+        {
+          "id": "t-H-1",
+          "name": "Cabo Verde",
+          "shortName": "CPV",
+          "countryCode": "CV",
+          "flagEmoji": "🇨🇻",
+          "flagUrl": "https://flagcdn.com/cv.svg",
+          "groupId": "H"
+        },
+        {
+          "id": "t-H-2",
+          "name": "Arabia Saudita",
+          "shortName": "KSA",
+          "countryCode": "SA",
+          "flagEmoji": "🇸🇦",
+          "flagUrl": "https://flagcdn.com/sa.svg",
+          "groupId": "H"
+        },
+        {
+          "id": "t-H-3",
+          "name": "Uruguay",
+          "shortName": "URU",
+          "countryCode": "UY",
+          "flagEmoji": "🇺🇾",
+          "flagUrl": "https://flagcdn.com/uy.svg",
+          "groupId": "H"
+        }
+      ],
+      "standings": [
+        {
+          "teamId": "t-H-0",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 1,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-H-1",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 2,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-H-2",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 3,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-H-3",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 4,
+          "qualificationStatus": "none"
+        }
+      ],
+      "matches": [
+        {
+          "id": "m-grp-043",
+          "stage": "group",
+          "groupId": "H",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-H-0",
+            "name": "España",
+            "shortName": "ESP",
+            "countryCode": "ES",
+            "flagEmoji": "🇪🇸",
+            "flagUrl": "https://flagcdn.com/es.svg",
+            "groupId": "H"
+          },
+          "awayTeam": {
+            "id": "t-H-1",
+            "name": "Cabo Verde",
+            "shortName": "CPV",
+            "countryCode": "CV",
+            "flagEmoji": "🇨🇻",
+            "flagUrl": "https://flagcdn.com/cv.svg",
+            "groupId": "H"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-044",
+          "stage": "group",
+          "groupId": "H",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-H-0",
+            "name": "España",
+            "shortName": "ESP",
+            "countryCode": "ES",
+            "flagEmoji": "🇪🇸",
+            "flagUrl": "https://flagcdn.com/es.svg",
+            "groupId": "H"
+          },
+          "awayTeam": {
+            "id": "t-H-2",
+            "name": "Arabia Saudita",
+            "shortName": "KSA",
+            "countryCode": "SA",
+            "flagEmoji": "🇸🇦",
+            "flagUrl": "https://flagcdn.com/sa.svg",
+            "groupId": "H"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-045",
+          "stage": "group",
+          "groupId": "H",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-H-0",
+            "name": "España",
+            "shortName": "ESP",
+            "countryCode": "ES",
+            "flagEmoji": "🇪🇸",
+            "flagUrl": "https://flagcdn.com/es.svg",
+            "groupId": "H"
+          },
+          "awayTeam": {
+            "id": "t-H-3",
+            "name": "Uruguay",
+            "shortName": "URU",
+            "countryCode": "UY",
+            "flagEmoji": "🇺🇾",
+            "flagUrl": "https://flagcdn.com/uy.svg",
+            "groupId": "H"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-046",
+          "stage": "group",
+          "groupId": "H",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-H-1",
+            "name": "Cabo Verde",
+            "shortName": "CPV",
+            "countryCode": "CV",
+            "flagEmoji": "🇨🇻",
+            "flagUrl": "https://flagcdn.com/cv.svg",
+            "groupId": "H"
+          },
+          "awayTeam": {
+            "id": "t-H-2",
+            "name": "Arabia Saudita",
+            "shortName": "KSA",
+            "countryCode": "SA",
+            "flagEmoji": "🇸🇦",
+            "flagUrl": "https://flagcdn.com/sa.svg",
+            "groupId": "H"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-047",
+          "stage": "group",
+          "groupId": "H",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-H-1",
+            "name": "Cabo Verde",
+            "shortName": "CPV",
+            "countryCode": "CV",
+            "flagEmoji": "🇨🇻",
+            "flagUrl": "https://flagcdn.com/cv.svg",
+            "groupId": "H"
+          },
+          "awayTeam": {
+            "id": "t-H-3",
+            "name": "Uruguay",
+            "shortName": "URU",
+            "countryCode": "UY",
+            "flagEmoji": "🇺🇾",
+            "flagUrl": "https://flagcdn.com/uy.svg",
+            "groupId": "H"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-048",
+          "stage": "group",
+          "groupId": "H",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-H-2",
+            "name": "Arabia Saudita",
+            "shortName": "KSA",
+            "countryCode": "SA",
+            "flagEmoji": "🇸🇦",
+            "flagUrl": "https://flagcdn.com/sa.svg",
+            "groupId": "H"
+          },
+          "awayTeam": {
+            "id": "t-H-3",
+            "name": "Uruguay",
+            "shortName": "URU",
+            "countryCode": "UY",
+            "flagEmoji": "🇺🇾",
+            "flagUrl": "https://flagcdn.com/uy.svg",
+            "groupId": "H"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        }
+      ]
+    },
+    {
+      "id": "I",
+      "name": "Grupo I",
+      "teams": [
+        {
+          "id": "t-I-0",
+          "name": "Francia",
+          "shortName": "FRA",
+          "countryCode": "FR",
+          "flagEmoji": "🇫🇷",
+          "flagUrl": "https://flagcdn.com/fr.svg",
+          "groupId": "I"
+        },
+        {
+          "id": "t-I-1",
+          "name": "Senegal",
+          "shortName": "SEN",
+          "countryCode": "SN",
+          "flagEmoji": "🇸🇳",
+          "flagUrl": "https://flagcdn.com/sn.svg",
+          "groupId": "I"
+        },
+        {
+          "id": "t-I-2",
+          "name": "Irak",
+          "shortName": "IRQ",
+          "countryCode": "IQ",
+          "flagEmoji": "🇮🇶",
+          "flagUrl": "https://flagcdn.com/iq.svg",
+          "groupId": "I"
+        },
+        {
+          "id": "t-I-3",
+          "name": "Noruega",
+          "shortName": "NOR",
+          "countryCode": "NO",
+          "flagEmoji": "🇳🇴",
+          "flagUrl": "https://flagcdn.com/no.svg",
+          "groupId": "I"
+        }
+      ],
+      "standings": [
+        {
+          "teamId": "t-I-0",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 1,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-I-1",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 2,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-I-2",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 3,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-I-3",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 4,
+          "qualificationStatus": "none"
+        }
+      ],
+      "matches": [
+        {
+          "id": "m-grp-049",
+          "stage": "group",
+          "groupId": "I",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-I-0",
+            "name": "Francia",
+            "shortName": "FRA",
+            "countryCode": "FR",
+            "flagEmoji": "🇫🇷",
+            "flagUrl": "https://flagcdn.com/fr.svg",
+            "groupId": "I"
+          },
+          "awayTeam": {
+            "id": "t-I-1",
+            "name": "Senegal",
+            "shortName": "SEN",
+            "countryCode": "SN",
+            "flagEmoji": "🇸🇳",
+            "flagUrl": "https://flagcdn.com/sn.svg",
+            "groupId": "I"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-050",
+          "stage": "group",
+          "groupId": "I",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-I-0",
+            "name": "Francia",
+            "shortName": "FRA",
+            "countryCode": "FR",
+            "flagEmoji": "🇫🇷",
+            "flagUrl": "https://flagcdn.com/fr.svg",
+            "groupId": "I"
+          },
+          "awayTeam": {
+            "id": "t-I-2",
+            "name": "Irak",
+            "shortName": "IRQ",
+            "countryCode": "IQ",
+            "flagEmoji": "🇮🇶",
+            "flagUrl": "https://flagcdn.com/iq.svg",
+            "groupId": "I"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-051",
+          "stage": "group",
+          "groupId": "I",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-I-0",
+            "name": "Francia",
+            "shortName": "FRA",
+            "countryCode": "FR",
+            "flagEmoji": "🇫🇷",
+            "flagUrl": "https://flagcdn.com/fr.svg",
+            "groupId": "I"
+          },
+          "awayTeam": {
+            "id": "t-I-3",
+            "name": "Noruega",
+            "shortName": "NOR",
+            "countryCode": "NO",
+            "flagEmoji": "🇳🇴",
+            "flagUrl": "https://flagcdn.com/no.svg",
+            "groupId": "I"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-052",
+          "stage": "group",
+          "groupId": "I",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-I-1",
+            "name": "Senegal",
+            "shortName": "SEN",
+            "countryCode": "SN",
+            "flagEmoji": "🇸🇳",
+            "flagUrl": "https://flagcdn.com/sn.svg",
+            "groupId": "I"
+          },
+          "awayTeam": {
+            "id": "t-I-2",
+            "name": "Irak",
+            "shortName": "IRQ",
+            "countryCode": "IQ",
+            "flagEmoji": "🇮🇶",
+            "flagUrl": "https://flagcdn.com/iq.svg",
+            "groupId": "I"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-053",
+          "stage": "group",
+          "groupId": "I",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-I-1",
+            "name": "Senegal",
+            "shortName": "SEN",
+            "countryCode": "SN",
+            "flagEmoji": "🇸🇳",
+            "flagUrl": "https://flagcdn.com/sn.svg",
+            "groupId": "I"
+          },
+          "awayTeam": {
+            "id": "t-I-3",
+            "name": "Noruega",
+            "shortName": "NOR",
+            "countryCode": "NO",
+            "flagEmoji": "🇳🇴",
+            "flagUrl": "https://flagcdn.com/no.svg",
+            "groupId": "I"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-054",
+          "stage": "group",
+          "groupId": "I",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-I-2",
+            "name": "Irak",
+            "shortName": "IRQ",
+            "countryCode": "IQ",
+            "flagEmoji": "🇮🇶",
+            "flagUrl": "https://flagcdn.com/iq.svg",
+            "groupId": "I"
+          },
+          "awayTeam": {
+            "id": "t-I-3",
+            "name": "Noruega",
+            "shortName": "NOR",
+            "countryCode": "NO",
+            "flagEmoji": "🇳🇴",
+            "flagUrl": "https://flagcdn.com/no.svg",
+            "groupId": "I"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        }
+      ]
+    },
+    {
+      "id": "J",
+      "name": "Grupo J",
+      "teams": [
+        {
+          "id": "t-J-0",
+          "name": "Argentina",
+          "shortName": "ARG",
+          "countryCode": "AR",
+          "flagEmoji": "🇦🇷",
+          "flagUrl": "https://flagcdn.com/ar.svg",
+          "groupId": "J"
+        },
+        {
+          "id": "t-J-1",
+          "name": "Argelia",
+          "shortName": "ALG",
+          "countryCode": "DZ",
+          "flagEmoji": "🇩🇿",
+          "flagUrl": "https://flagcdn.com/dz.svg",
+          "groupId": "J"
+        },
+        {
+          "id": "t-J-2",
+          "name": "Austria",
+          "shortName": "AUT",
+          "countryCode": "AT",
+          "flagEmoji": "🇦🇹",
+          "flagUrl": "https://flagcdn.com/at.svg",
+          "groupId": "J"
+        },
+        {
+          "id": "t-J-3",
+          "name": "Jordania",
+          "shortName": "JOR",
+          "countryCode": "JO",
+          "flagEmoji": "🇯🇴",
+          "flagUrl": "https://flagcdn.com/jo.svg",
+          "groupId": "J"
+        }
+      ],
+      "standings": [
+        {
+          "teamId": "t-J-0",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 1,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-J-1",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 2,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-J-2",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 3,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-J-3",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 4,
+          "qualificationStatus": "none"
+        }
+      ],
+      "matches": [
+        {
+          "id": "m-grp-055",
+          "stage": "group",
+          "groupId": "J",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-J-0",
+            "name": "Argentina",
+            "shortName": "ARG",
+            "countryCode": "AR",
+            "flagEmoji": "🇦🇷",
+            "flagUrl": "https://flagcdn.com/ar.svg",
+            "groupId": "J"
+          },
+          "awayTeam": {
+            "id": "t-J-1",
+            "name": "Argelia",
+            "shortName": "ALG",
+            "countryCode": "DZ",
+            "flagEmoji": "🇩🇿",
+            "flagUrl": "https://flagcdn.com/dz.svg",
+            "groupId": "J"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-056",
+          "stage": "group",
+          "groupId": "J",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-J-0",
+            "name": "Argentina",
+            "shortName": "ARG",
+            "countryCode": "AR",
+            "flagEmoji": "🇦🇷",
+            "flagUrl": "https://flagcdn.com/ar.svg",
+            "groupId": "J"
+          },
+          "awayTeam": {
+            "id": "t-J-2",
+            "name": "Austria",
+            "shortName": "AUT",
+            "countryCode": "AT",
+            "flagEmoji": "🇦🇹",
+            "flagUrl": "https://flagcdn.com/at.svg",
+            "groupId": "J"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-057",
+          "stage": "group",
+          "groupId": "J",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-J-0",
+            "name": "Argentina",
+            "shortName": "ARG",
+            "countryCode": "AR",
+            "flagEmoji": "🇦🇷",
+            "flagUrl": "https://flagcdn.com/ar.svg",
+            "groupId": "J"
+          },
+          "awayTeam": {
+            "id": "t-J-3",
+            "name": "Jordania",
+            "shortName": "JOR",
+            "countryCode": "JO",
+            "flagEmoji": "🇯🇴",
+            "flagUrl": "https://flagcdn.com/jo.svg",
+            "groupId": "J"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-058",
+          "stage": "group",
+          "groupId": "J",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-J-1",
+            "name": "Argelia",
+            "shortName": "ALG",
+            "countryCode": "DZ",
+            "flagEmoji": "🇩🇿",
+            "flagUrl": "https://flagcdn.com/dz.svg",
+            "groupId": "J"
+          },
+          "awayTeam": {
+            "id": "t-J-2",
+            "name": "Austria",
+            "shortName": "AUT",
+            "countryCode": "AT",
+            "flagEmoji": "🇦🇹",
+            "flagUrl": "https://flagcdn.com/at.svg",
+            "groupId": "J"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-059",
+          "stage": "group",
+          "groupId": "J",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-J-1",
+            "name": "Argelia",
+            "shortName": "ALG",
+            "countryCode": "DZ",
+            "flagEmoji": "🇩🇿",
+            "flagUrl": "https://flagcdn.com/dz.svg",
+            "groupId": "J"
+          },
+          "awayTeam": {
+            "id": "t-J-3",
+            "name": "Jordania",
+            "shortName": "JOR",
+            "countryCode": "JO",
+            "flagEmoji": "🇯🇴",
+            "flagUrl": "https://flagcdn.com/jo.svg",
+            "groupId": "J"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-060",
+          "stage": "group",
+          "groupId": "J",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-J-2",
+            "name": "Austria",
+            "shortName": "AUT",
+            "countryCode": "AT",
+            "flagEmoji": "🇦🇹",
+            "flagUrl": "https://flagcdn.com/at.svg",
+            "groupId": "J"
+          },
+          "awayTeam": {
+            "id": "t-J-3",
+            "name": "Jordania",
+            "shortName": "JOR",
+            "countryCode": "JO",
+            "flagEmoji": "🇯🇴",
+            "flagUrl": "https://flagcdn.com/jo.svg",
+            "groupId": "J"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        }
+      ]
+    },
+    {
+      "id": "K",
+      "name": "Grupo K",
+      "teams": [
+        {
+          "id": "t-K-0",
+          "name": "Portugal",
+          "shortName": "POR",
+          "countryCode": "PT",
+          "flagEmoji": "🇵🇹",
+          "flagUrl": "https://flagcdn.com/pt.svg",
+          "groupId": "K"
+        },
+        {
+          "id": "t-K-1",
+          "name": "RD Congo",
+          "shortName": "COD",
+          "countryCode": "CD",
+          "flagEmoji": "🇨🇩",
+          "flagUrl": "https://flagcdn.com/cd.svg",
+          "groupId": "K"
+        },
+        {
+          "id": "t-K-2",
+          "name": "Uzbekistán",
+          "shortName": "UZB",
+          "countryCode": "UZ",
+          "flagEmoji": "🇺🇿",
+          "flagUrl": "https://flagcdn.com/uz.svg",
+          "groupId": "K"
+        },
+        {
+          "id": "t-K-3",
+          "name": "Colombia",
+          "shortName": "COL",
+          "countryCode": "CO",
+          "flagEmoji": "🇨🇴",
+          "flagUrl": "https://flagcdn.com/co.svg",
+          "groupId": "K"
+        }
+      ],
+      "standings": [
+        {
+          "teamId": "t-K-0",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 1,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-K-1",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 2,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-K-2",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 3,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-K-3",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 4,
+          "qualificationStatus": "none"
+        }
+      ],
+      "matches": [
+        {
+          "id": "m-grp-061",
+          "stage": "group",
+          "groupId": "K",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-K-0",
+            "name": "Portugal",
+            "shortName": "POR",
+            "countryCode": "PT",
+            "flagEmoji": "🇵🇹",
+            "flagUrl": "https://flagcdn.com/pt.svg",
+            "groupId": "K"
+          },
+          "awayTeam": {
+            "id": "t-K-1",
+            "name": "RD Congo",
+            "shortName": "COD",
+            "countryCode": "CD",
+            "flagEmoji": "🇨🇩",
+            "flagUrl": "https://flagcdn.com/cd.svg",
+            "groupId": "K"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-062",
+          "stage": "group",
+          "groupId": "K",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-K-0",
+            "name": "Portugal",
+            "shortName": "POR",
+            "countryCode": "PT",
+            "flagEmoji": "🇵🇹",
+            "flagUrl": "https://flagcdn.com/pt.svg",
+            "groupId": "K"
+          },
+          "awayTeam": {
+            "id": "t-K-2",
+            "name": "Uzbekistán",
+            "shortName": "UZB",
+            "countryCode": "UZ",
+            "flagEmoji": "🇺🇿",
+            "flagUrl": "https://flagcdn.com/uz.svg",
+            "groupId": "K"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-063",
+          "stage": "group",
+          "groupId": "K",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-K-0",
+            "name": "Portugal",
+            "shortName": "POR",
+            "countryCode": "PT",
+            "flagEmoji": "🇵🇹",
+            "flagUrl": "https://flagcdn.com/pt.svg",
+            "groupId": "K"
+          },
+          "awayTeam": {
+            "id": "t-K-3",
+            "name": "Colombia",
+            "shortName": "COL",
+            "countryCode": "CO",
+            "flagEmoji": "🇨🇴",
+            "flagUrl": "https://flagcdn.com/co.svg",
+            "groupId": "K"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-064",
+          "stage": "group",
+          "groupId": "K",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-K-1",
+            "name": "RD Congo",
+            "shortName": "COD",
+            "countryCode": "CD",
+            "flagEmoji": "🇨🇩",
+            "flagUrl": "https://flagcdn.com/cd.svg",
+            "groupId": "K"
+          },
+          "awayTeam": {
+            "id": "t-K-2",
+            "name": "Uzbekistán",
+            "shortName": "UZB",
+            "countryCode": "UZ",
+            "flagEmoji": "🇺🇿",
+            "flagUrl": "https://flagcdn.com/uz.svg",
+            "groupId": "K"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-065",
+          "stage": "group",
+          "groupId": "K",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-K-1",
+            "name": "RD Congo",
+            "shortName": "COD",
+            "countryCode": "CD",
+            "flagEmoji": "🇨🇩",
+            "flagUrl": "https://flagcdn.com/cd.svg",
+            "groupId": "K"
+          },
+          "awayTeam": {
+            "id": "t-K-3",
+            "name": "Colombia",
+            "shortName": "COL",
+            "countryCode": "CO",
+            "flagEmoji": "🇨🇴",
+            "flagUrl": "https://flagcdn.com/co.svg",
+            "groupId": "K"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-066",
+          "stage": "group",
+          "groupId": "K",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-K-2",
+            "name": "Uzbekistán",
+            "shortName": "UZB",
+            "countryCode": "UZ",
+            "flagEmoji": "🇺🇿",
+            "flagUrl": "https://flagcdn.com/uz.svg",
+            "groupId": "K"
+          },
+          "awayTeam": {
+            "id": "t-K-3",
+            "name": "Colombia",
+            "shortName": "COL",
+            "countryCode": "CO",
+            "flagEmoji": "🇨🇴",
+            "flagUrl": "https://flagcdn.com/co.svg",
+            "groupId": "K"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        }
+      ]
+    },
+    {
+      "id": "L",
+      "name": "Grupo L",
+      "teams": [
+        {
+          "id": "t-L-0",
+          "name": "Inglaterra",
+          "shortName": "ENG",
+          "countryCode": "GB",
+          "flagEmoji": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "flagUrl": "https://flagcdn.com/gb-eng.svg",
+          "groupId": "L"
+        },
+        {
+          "id": "t-L-1",
+          "name": "Croacia",
+          "shortName": "CRO",
+          "countryCode": "HR",
+          "flagEmoji": "🇭🇷",
+          "flagUrl": "https://flagcdn.com/hr.svg",
+          "groupId": "L"
+        },
+        {
+          "id": "t-L-2",
+          "name": "Ghana",
+          "shortName": "GHA",
+          "countryCode": "GH",
+          "flagEmoji": "🇬🇭",
+          "flagUrl": "https://flagcdn.com/gh.svg",
+          "groupId": "L"
+        },
+        {
+          "id": "t-L-3",
+          "name": "Panamá",
+          "shortName": "PAN",
+          "countryCode": "PA",
+          "flagEmoji": "🇵🇦",
+          "flagUrl": "https://flagcdn.com/pa.svg",
+          "groupId": "L"
+        }
+      ],
+      "standings": [
+        {
+          "teamId": "t-L-0",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 1,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-L-1",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 2,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-L-2",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 3,
+          "qualificationStatus": "none"
+        },
+        {
+          "teamId": "t-L-3",
+          "played": 0,
+          "won": 0,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 0,
+          "rank": 4,
+          "qualificationStatus": "none"
+        }
+      ],
+      "matches": [
+        {
+          "id": "m-grp-067",
+          "stage": "group",
+          "groupId": "L",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-L-0",
+            "name": "Inglaterra",
+            "shortName": "ENG",
+            "countryCode": "GB",
+            "flagEmoji": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "flagUrl": "https://flagcdn.com/gb-eng.svg",
+            "groupId": "L"
+          },
+          "awayTeam": {
+            "id": "t-L-1",
+            "name": "Croacia",
+            "shortName": "CRO",
+            "countryCode": "HR",
+            "flagEmoji": "🇭🇷",
+            "flagUrl": "https://flagcdn.com/hr.svg",
+            "groupId": "L"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-068",
+          "stage": "group",
+          "groupId": "L",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-L-0",
+            "name": "Inglaterra",
+            "shortName": "ENG",
+            "countryCode": "GB",
+            "flagEmoji": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "flagUrl": "https://flagcdn.com/gb-eng.svg",
+            "groupId": "L"
+          },
+          "awayTeam": {
+            "id": "t-L-2",
+            "name": "Ghana",
+            "shortName": "GHA",
+            "countryCode": "GH",
+            "flagEmoji": "🇬🇭",
+            "flagUrl": "https://flagcdn.com/gh.svg",
+            "groupId": "L"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-069",
+          "stage": "group",
+          "groupId": "L",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-L-0",
+            "name": "Inglaterra",
+            "shortName": "ENG",
+            "countryCode": "GB",
+            "flagEmoji": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+            "flagUrl": "https://flagcdn.com/gb-eng.svg",
+            "groupId": "L"
+          },
+          "awayTeam": {
+            "id": "t-L-3",
+            "name": "Panamá",
+            "shortName": "PAN",
+            "countryCode": "PA",
+            "flagEmoji": "🇵🇦",
+            "flagUrl": "https://flagcdn.com/pa.svg",
+            "groupId": "L"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-070",
+          "stage": "group",
+          "groupId": "L",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-L-1",
+            "name": "Croacia",
+            "shortName": "CRO",
+            "countryCode": "HR",
+            "flagEmoji": "🇭🇷",
+            "flagUrl": "https://flagcdn.com/hr.svg",
+            "groupId": "L"
+          },
+          "awayTeam": {
+            "id": "t-L-2",
+            "name": "Ghana",
+            "shortName": "GHA",
+            "countryCode": "GH",
+            "flagEmoji": "🇬🇭",
+            "flagUrl": "https://flagcdn.com/gh.svg",
+            "groupId": "L"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-071",
+          "stage": "group",
+          "groupId": "L",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-L-1",
+            "name": "Croacia",
+            "shortName": "CRO",
+            "countryCode": "HR",
+            "flagEmoji": "🇭🇷",
+            "flagUrl": "https://flagcdn.com/hr.svg",
+            "groupId": "L"
+          },
+          "awayTeam": {
+            "id": "t-L-3",
+            "name": "Panamá",
+            "shortName": "PAN",
+            "countryCode": "PA",
+            "flagEmoji": "🇵🇦",
+            "flagUrl": "https://flagcdn.com/pa.svg",
+            "groupId": "L"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        },
+        {
+          "id": "m-grp-072",
+          "stage": "group",
+          "groupId": "L",
+          "round": "Fase de grupos",
+          "homeTeam": {
+            "id": "t-L-2",
+            "name": "Ghana",
+            "shortName": "GHA",
+            "countryCode": "GH",
+            "flagEmoji": "🇬🇭",
+            "flagUrl": "https://flagcdn.com/gh.svg",
+            "groupId": "L"
+          },
+          "awayTeam": {
+            "id": "t-L-3",
+            "name": "Panamá",
+            "shortName": "PAN",
+            "countryCode": "PA",
+            "flagEmoji": "🇵🇦",
+            "flagUrl": "https://flagcdn.com/pa.svg",
+            "groupId": "L"
+          },
+          "homeScore": null,
+          "awayScore": null,
+          "penaltiesHome": null,
+          "penaltiesAway": null,
+          "status": "scheduled",
+          "minute": null,
+          "kickoffUtc": null,
+          "winnerTeamId": null
+        }
+      ]
+    }
+  ],
+  "knockout": [
+    {
+      "id": "r32-1",
+      "round": "round32",
+      "side": "left",
+      "position": 0,
+      "match": null,
+      "sourceHome": "Ganador de grupo",
+      "sourceAway": "Mejor tercero",
+      "nextTieId": "r16-17"
+    },
+    {
+      "id": "r32-2",
+      "round": "round32",
+      "side": "left",
+      "position": 1,
+      "match": null,
+      "sourceHome": "Segundo de grupo",
+      "sourceAway": "Segundo de grupo",
+      "nextTieId": "r16-17"
+    },
+    {
+      "id": "r32-3",
+      "round": "round32",
+      "side": "left",
+      "position": 2,
+      "match": null,
+      "sourceHome": "Ganador de grupo",
+      "sourceAway": "Mejor tercero",
+      "nextTieId": "r16-18"
+    },
+    {
+      "id": "r32-4",
+      "round": "round32",
+      "side": "left",
+      "position": 3,
+      "match": null,
+      "sourceHome": "Ganador de grupo",
+      "sourceAway": "Segundo de grupo",
+      "nextTieId": "r16-18"
+    },
+    {
+      "id": "r32-5",
+      "round": "round32",
+      "side": "left",
+      "position": 4,
+      "match": null,
+      "sourceHome": "Ganador de grupo",
+      "sourceAway": "Mejor tercero",
+      "nextTieId": "r16-19"
+    },
+    {
+      "id": "r32-6",
+      "round": "round32",
+      "side": "left",
+      "position": 5,
+      "match": null,
+      "sourceHome": "Segundo de grupo",
+      "sourceAway": "Segundo de grupo",
+      "nextTieId": "r16-19"
+    },
+    {
+      "id": "r32-7",
+      "round": "round32",
+      "side": "left",
+      "position": 6,
+      "match": null,
+      "sourceHome": "Ganador de grupo",
+      "sourceAway": "Mejor tercero",
+      "nextTieId": "r16-20"
+    },
+    {
+      "id": "r32-8",
+      "round": "round32",
+      "side": "left",
+      "position": 7,
+      "match": null,
+      "sourceHome": "Ganador de grupo",
+      "sourceAway": "Segundo de grupo",
+      "nextTieId": "r16-20"
+    },
+    {
+      "id": "r32-9",
+      "round": "round32",
+      "side": "right",
+      "position": 0,
+      "match": null,
+      "sourceHome": "Ganador de grupo",
+      "sourceAway": "Mejor tercero",
+      "nextTieId": "r16-21"
+    },
+    {
+      "id": "r32-10",
+      "round": "round32",
+      "side": "right",
+      "position": 1,
+      "match": null,
+      "sourceHome": "Segundo de grupo",
+      "sourceAway": "Segundo de grupo",
+      "nextTieId": "r16-21"
+    },
+    {
+      "id": "r32-11",
+      "round": "round32",
+      "side": "right",
+      "position": 2,
+      "match": null,
+      "sourceHome": "Ganador de grupo",
+      "sourceAway": "Mejor tercero",
+      "nextTieId": "r16-22"
+    },
+    {
+      "id": "r32-12",
+      "round": "round32",
+      "side": "right",
+      "position": 3,
+      "match": null,
+      "sourceHome": "Ganador de grupo",
+      "sourceAway": "Segundo de grupo",
+      "nextTieId": "r16-22"
+    },
+    {
+      "id": "r32-13",
+      "round": "round32",
+      "side": "right",
+      "position": 4,
+      "match": null,
+      "sourceHome": "Ganador de grupo",
+      "sourceAway": "Mejor tercero",
+      "nextTieId": "r16-23"
+    },
+    {
+      "id": "r32-14",
+      "round": "round32",
+      "side": "right",
+      "position": 5,
+      "match": null,
+      "sourceHome": "Segundo de grupo",
+      "sourceAway": "Segundo de grupo",
+      "nextTieId": "r16-23"
+    },
+    {
+      "id": "r32-15",
+      "round": "round32",
+      "side": "right",
+      "position": 6,
+      "match": null,
+      "sourceHome": "Ganador de grupo",
+      "sourceAway": "Mejor tercero",
+      "nextTieId": "r16-24"
+    },
+    {
+      "id": "r32-16",
+      "round": "round32",
+      "side": "right",
+      "position": 7,
+      "match": null,
+      "sourceHome": "Ganador de grupo",
+      "sourceAway": "Segundo de grupo",
+      "nextTieId": "r16-24"
+    },
+    {
+      "id": "r16-17",
+      "round": "round16",
+      "side": "left",
+      "position": 0,
+      "match": null,
+      "sourceHome": "Ganador de dieciseisavos",
+      "sourceAway": "Ganador de dieciseisavos",
+      "nextTieId": "qf-25"
+    },
+    {
+      "id": "r16-18",
+      "round": "round16",
+      "side": "left",
+      "position": 1,
+      "match": null,
+      "sourceHome": "Ganador de dieciseisavos",
+      "sourceAway": "Ganador de dieciseisavos",
+      "nextTieId": "qf-25"
+    },
+    {
+      "id": "r16-19",
+      "round": "round16",
+      "side": "left",
+      "position": 2,
+      "match": null,
+      "sourceHome": "Ganador de dieciseisavos",
+      "sourceAway": "Ganador de dieciseisavos",
+      "nextTieId": "qf-26"
+    },
+    {
+      "id": "r16-20",
+      "round": "round16",
+      "side": "left",
+      "position": 3,
+      "match": null,
+      "sourceHome": "Ganador de dieciseisavos",
+      "sourceAway": "Ganador de dieciseisavos",
+      "nextTieId": "qf-26"
+    },
+    {
+      "id": "r16-21",
+      "round": "round16",
+      "side": "right",
+      "position": 0,
+      "match": null,
+      "sourceHome": "Ganador de dieciseisavos",
+      "sourceAway": "Ganador de dieciseisavos",
+      "nextTieId": "qf-27"
+    },
+    {
+      "id": "r16-22",
+      "round": "round16",
+      "side": "right",
+      "position": 1,
+      "match": null,
+      "sourceHome": "Ganador de dieciseisavos",
+      "sourceAway": "Ganador de dieciseisavos",
+      "nextTieId": "qf-27"
+    },
+    {
+      "id": "r16-23",
+      "round": "round16",
+      "side": "right",
+      "position": 2,
+      "match": null,
+      "sourceHome": "Ganador de dieciseisavos",
+      "sourceAway": "Ganador de dieciseisavos",
+      "nextTieId": "qf-28"
+    },
+    {
+      "id": "r16-24",
+      "round": "round16",
+      "side": "right",
+      "position": 3,
+      "match": null,
+      "sourceHome": "Ganador de dieciseisavos",
+      "sourceAway": "Ganador de dieciseisavos",
+      "nextTieId": "qf-28"
+    },
+    {
+      "id": "qf-25",
+      "round": "quarter",
+      "side": "left",
+      "position": 0,
+      "match": null,
+      "sourceHome": "Ganador de octavos",
+      "sourceAway": "Ganador de octavos",
+      "nextTieId": "sf-29"
+    },
+    {
+      "id": "qf-26",
+      "round": "quarter",
+      "side": "left",
+      "position": 1,
+      "match": null,
+      "sourceHome": "Ganador de octavos",
+      "sourceAway": "Ganador de octavos",
+      "nextTieId": "sf-29"
+    },
+    {
+      "id": "qf-27",
+      "round": "quarter",
+      "side": "right",
+      "position": 0,
+      "match": null,
+      "sourceHome": "Ganador de octavos",
+      "sourceAway": "Ganador de octavos",
+      "nextTieId": "sf-30"
+    },
+    {
+      "id": "qf-28",
+      "round": "quarter",
+      "side": "right",
+      "position": 1,
+      "match": null,
+      "sourceHome": "Ganador de octavos",
+      "sourceAway": "Ganador de octavos",
+      "nextTieId": "sf-30"
+    },
+    {
+      "id": "sf-29",
+      "round": "semi",
+      "side": "left",
+      "position": 0,
+      "match": null,
+      "sourceHome": "Ganador de cuartos",
+      "sourceAway": "Ganador de cuartos",
+      "nextTieId": "final-32"
+    },
+    {
+      "id": "sf-30",
+      "round": "semi",
+      "side": "right",
+      "position": 0,
+      "match": null,
+      "sourceHome": "Ganador de cuartos",
+      "sourceAway": "Ganador de cuartos",
+      "nextTieId": "final-32"
+    },
+    {
+      "id": "third-31",
+      "round": "third",
+      "side": "center",
+      "position": 0,
+      "match": null,
+      "sourceHome": "Perdedor de semifinal",
+      "sourceAway": "Perdedor de semifinal",
+      "nextTieId": null
+    },
+    {
+      "id": "final-32",
+      "round": "final",
+      "side": "center",
+      "position": 0,
+      "match": null,
+      "sourceHome": "Ganador de semifinal",
+      "sourceAway": "Ganador de semifinal",
+      "nextTieId": null
+    }
+  ],
+  "lastUpdatedUtc": "2026-06-15T23:38:00.089Z"
+}
