@@ -41,7 +41,7 @@ export function GroupCard({
       </StatusBadge>
     )
 
-  const panelId = `group-panel-${group.id}`
+  const matchesPanelId = `group-matches-${group.id}`
 
   return (
     <section
@@ -50,12 +50,12 @@ export function GroupCard({
       }`}
       aria-labelledby={`group-h-${group.id}`}
     >
-      {/* Header (toggle) */}
+      {/* Header (toggle de partidos) */}
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
-        aria-controls={panelId}
+        aria-controls={matchesPanelId}
         className="flex w-full items-center justify-between gap-3 p-4 text-left transition-colors hover:bg-white/[0.02] sm:p-5"
       >
         <div className="flex items-center gap-3">
@@ -88,42 +88,44 @@ export function GroupCard({
         </div>
       </button>
 
-      {/* Panel */}
+      <div className="border-t border-white/[0.06] px-4 pb-5 pt-4 sm:px-5">
+        <StandingsTable
+          standings={group.standings}
+          teams={group.teams}
+          highlightTeamId={highlightTeamId}
+        />
+
+        {/* Leyenda */}
+        <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[0.68rem] text-cream/45">
+          <span className="inline-flex items-center gap-1.5">
+            <span className="h-2.5 w-2.5 rounded-full bg-pitch-500" aria-hidden />
+            Clasifica directo
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <span className="h-2.5 w-2.5 rounded-full bg-gold-400/80" aria-hidden />
+            Entra como mejor tercero
+          </span>
+        </div>
+
+        <h4 className="mt-5 text-xs font-semibold uppercase tracking-wider text-cream/40">
+          Partidos
+        </h4>
+      </div>
+
+      {/* Partidos */}
       <AnimatePresence initial={false}>
         {open && (
           <motion.div
-            id={panelId}
-            key="panel"
+            id={matchesPanelId}
+            key="matches"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
             className="overflow-hidden"
           >
-            <div className="border-t border-white/[0.06] px-4 pb-5 pt-4 sm:px-5">
-              <StandingsTable
-                standings={group.standings}
-                teams={group.teams}
-                highlightTeamId={highlightTeamId}
-              />
-
-              {/* Leyenda */}
-              <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[0.68rem] text-cream/45">
-                <span className="inline-flex items-center gap-1.5">
-                  <span className="h-2.5 w-2.5 rounded-full bg-pitch-500" aria-hidden />
-                  Clasifica directo
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <span className="h-2.5 w-2.5 rounded-full bg-gold-400/80" aria-hidden />
-                  Entra como mejor tercero
-                </span>
-              </div>
-
-              {/* Partidos */}
-              <div className="mt-5">
-                <h4 className="mb-2.5 text-xs font-semibold uppercase tracking-wider text-cream/40">
-                  Partidos
-                </h4>
+            <div className="px-4 pb-5 sm:px-5">
+              <div className="pt-2">
                 {visibleMatches.length > 0 ? (
                   <div className="grid gap-2.5">
                     {visibleMatches.map((m) => (

@@ -53,12 +53,11 @@ export function GroupsView({ groups, filter, search }: GroupsViewProps) {
     <div className="space-y-5">
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
         {visibleGroups.map((g) => (
-          // Todos los grupos abiertos por defecto para que siempre se vea su
-          // tabla y sus partidos. El usuario igual puede colapsarlos.
+          // Las tablas quedan visibles por defecto; el usuario abre los
+          // partidos de cada grupo con el chevron.
           <GroupCard
             key={g.id}
             group={g}
-            defaultOpen
             filter={filter}
             highlightTeamId={highlightTeamId}
           />
