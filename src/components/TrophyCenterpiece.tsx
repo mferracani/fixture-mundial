@@ -8,12 +8,12 @@ interface TrophyCenterpieceProps {
 
 /**
  * Imagen de la Copa del Mundo para el centro del bracket.
- * Intenta cargar el asset propio `/assets/world-cup-trophy.png`; si no existe,
+ * Intenta cargar el asset propio `/assets/world-cup-trophy.jpg`; si no existe,
  * cae al placeholder premium con silueta abstracta `/assets/world-cup-trophy.svg`.
  * Siempre con alt text accesible.
  */
 export function TrophyCenterpiece({ size = 200, className = '' }: TrophyCenterpieceProps) {
-  const [src, setSrc] = useState('/assets/world-cup-trophy.png')
+  const [src, setSrc] = useState('/assets/world-cup-trophy.jpg')
 
   return (
     <div className={`relative flex flex-col items-center ${className}`}>
