@@ -9,6 +9,7 @@ import { SkeletonGrid } from '@/components/SkeletonCard'
 import { ErrorState } from '@/components/ErrorState'
 import type { Section } from '@/components/TopNavigation'
 import { GroupsView } from '@/features/groups/GroupsView'
+import { UpcomingMatchesView } from '@/features/groups/UpcomingMatchesView'
 import { KnockoutView } from '@/features/knockout/KnockoutView'
 import { useWorldCupData } from '@/hooks/useWorldCupData'
 import { useOnlineStatus } from '@/hooks/useOnlineStatus'
@@ -34,9 +35,15 @@ export default function App() {
 
   const counts = useMemo(() => countByState(view), [view])
   const resultsCount = Object.keys(results).length
+  const showUpcoming = section === 'groups' && filter === 'upcoming'
+
+  const handleSectionChange = (nextSection: Section) => {
+    setSection(nextSection)
+    if (nextSection !== 'groups') setFilter('all')
+  }
 
   return (
-    <AppShell section={section} onSectionChange={setSection} offline={!online}>
+    <AppShell section={section} onSectionChange={handleSectionChange} offline={!online}>
       <HeroHeader
         lastUpdatedUtc={data?.lastUpdatedUtc}
         liveCount={counts.live}
@@ -79,21 +86,25 @@ export default function App() {
         </div>
       )}
 
-      {/* Controles: filtros + buscador (relevantes en la vista de grupos) */}
+      {/* Controles de la vista de grupos */}
       {section === 'groups' && (
         <div className="sticky top-[60px] z-30 -mx-4 mt-7 bg-night-950/60 px-4 py-3 backdrop-blur-md sm:top-[64px] sm:mx-0 sm:rounded-2xl sm:px-4">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <FilterBar
               value={filter}
-              onChange={setFilter}
-              counts={{ live: counts.live, upcoming: counts.upcoming, finished: counts.finished }}
+              onChange={(nextFilter) =>
+                setFilter((current) => (current === nextFilter ? 'all' : nextFilter))
+              }
+              counts={{ upcoming: counts.upcoming }}
             />
-            <SearchInput
-              value={search}
-              onChange={setSearch}
-              className="w-full sm:max-w-xs"
-              placeholder="Buscar país o grupo…"
-            />
+            {!showUpcoming && (
+              <SearchInput
+                value={search}
+                onChange={setSearch}
+                className="w-full sm:max-w-xs"
+                placeholder="Buscar país o grupo…"
+              />
+            )}
           </div>
         </div>
       )}
@@ -114,7 +125,9 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.22, ease: 'easeOut' }}
           >
-            {section === 'groups' ? (
+            {showUpcoming ? (
+              <UpcomingMatchesView groups={view?.groups ?? []} knockout={view?.knockout ?? []} />
+            ) : section === 'groups' ? (
               <GroupsView groups={view?.groups ?? []} filter={filter} search={search} />
             ) : (
               <KnockoutView ties={view?.knockout ?? []} />
