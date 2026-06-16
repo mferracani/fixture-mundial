@@ -65,7 +65,9 @@ export function MatchCard({
   const homeWon = finished && match.winnerTeamId === homeTeam?.id
   const awayWon = finished && match.winnerTeamId === awayTeam?.id
   const hasPenalties = penaltiesHome != null && penaltiesAway != null
-  const hasStored = homeScore != null || awayScore != null
+  const editorHomeScore = rawEntry?.home ?? homeScore ?? null
+  const editorAwayScore = rawEntry?.away ?? awayScore ?? null
+  const hasLocalOverride = rawEntry != null
 
   return (
     <div
@@ -103,8 +105,8 @@ export function MatchCard({
         <div className="flex shrink-0 items-center gap-2 px-1">
           {editable ? (
             <ScoreEditor
-              homeScore={rawEntry?.home ?? null}
-              awayScore={rawEntry?.away ?? null}
+              homeScore={editorHomeScore}
+              awayScore={editorAwayScore}
               onChange={(h, a) => setScore(match.id, h, a)}
               homeLabel={`Goles de ${homeTeam?.name ?? 'local'}`}
               awayLabel={`Goles de ${awayTeam?.name ?? 'visitante'}`}
@@ -167,7 +169,7 @@ export function MatchCard({
             </span>
           </span>
         )}
-        {editable && hasStored && (
+        {editable && hasLocalOverride && (
           <button
             type="button"
             onClick={() => clearScore(match.id)}
