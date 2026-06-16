@@ -1,6 +1,7 @@
 import type { Group, KnockoutTie, Match, Stage, Standing, Team, WorldCupData } from '@/types'
 import { computeStandings, allFinished, playedCount } from './standings'
 import { BRACKET, roundShortLabel, type SlotRef, type TieDef } from './bracket'
+import { thirdPlaceGroupForWinner, thirdPlaceLabel } from './thirdPlaceRules'
 
 // Resultado cargado manualmente por el usuario para un partido.
 export interface ScoreEntry {
@@ -67,7 +68,7 @@ interface BuildCtx {
   teamsById: Record<string, Team>
   standingsByGroup: Record<string, Standing[]>
   decided: Record<string, boolean>
-  qualifiedThirds: Standing[]
+  qualifiedThirdGroups: string[]
   allDecided: boolean
   resolved: Record<string, ResolvedTie>
 }
@@ -85,9 +86,10 @@ function resolveSlot(ref: SlotRef, ctx: BuildCtx): SlotResolution {
       return { team, confirmed: !!team && ctx.decided[ref.group], label: `2º Grupo ${ref.group}` }
     }
     case 'third': {
-      const s = ctx.qualifiedThirds[ref.rank]
+      const thirdGroup = thirdPlaceGroupForWinner(ref.winnerGroup, ctx.qualifiedThirdGroups)
+      const s = thirdGroup ? ctx.standingsByGroup[thirdGroup]?.[2] : null
       const team = s ? ctx.teamsById[s.teamId] : null
-      return { team, confirmed: !!team && ctx.allDecided, label: 'Mejor tercero' }
+      return { team, confirmed: !!team && ctx.allDecided, label: thirdPlaceLabel(ref.winnerGroup) }
     }
     case 'winnerOf': {
       const r = ctx.resolved[ref.tieId]
@@ -151,7 +153,7 @@ export function buildFixtureView(base: WorldCupData, results: ResultsMap): Fixtu
   }
   const allDecided = groups.every((g) => decided[g.id])
 
-  // 2. Ranking de mejores terceros (criterios FIFA: pts, DG, GF)
+  // 2. Ranking de mejores terceros (criterios FIFA disponibles: pts, DG, GF)
   const thirds = groups.map((g) => g.standings[2]).filter(Boolean) as Standing[]
   const rankedThirds = [...thirds].sort(
     (a, b) =>
@@ -161,6 +163,9 @@ export function buildFixtureView(base: WorldCupData, results: ResultsMap): Fixtu
   )
   const qualifiedThirds = rankedThirds.slice(0, 8)
   const qualifiedThirdIds = new Set(qualifiedThirds.map((s) => s.teamId))
+  const qualifiedThirdGroups = qualifiedThirds
+    .map((s) => teamsById[s.teamId]?.groupId)
+    .filter(Boolean) as string[]
 
   // 3. Marcar estado de clasificación en cada tabla (solo si ya se jugó algo)
   for (const g of groups) {
@@ -183,7 +188,7 @@ export function buildFixtureView(base: WorldCupData, results: ResultsMap): Fixtu
     teamsById,
     standingsByGroup,
     decided,
-    qualifiedThirds,
+    qualifiedThirdGroups,
     allDecided,
     resolved: {},
   }
