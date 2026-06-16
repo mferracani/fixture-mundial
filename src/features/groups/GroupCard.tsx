@@ -111,11 +111,11 @@ export function GroupCard({
               <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[0.68rem] text-cream/45">
                 <span className="inline-flex items-center gap-1.5">
                   <span className="h-2.5 w-2.5 rounded-full bg-pitch-500" aria-hidden />
-                  Clasifica a eliminatorias
+                  Clasifica directo
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <span className="h-2.5 w-2.5 rounded-full bg-gold-400/80" aria-hidden />
-                  Puede clasificar según ranking de terceros
+                  Entra como mejor tercero
                 </span>
               </div>
 
