@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 import type { Group } from '@/types'
@@ -30,7 +30,14 @@ export function GroupCard({
   const [open, setOpen] = useState(defaultOpen)
   const status = groupStatus(group)
   const hasLive = groupHasLive(group)
-  const visibleMatches = group.matches.filter((m) => matchesFilter(m, filter))
+  const visibleMatches = useMemo(() => {
+    return [...group.matches.filter((m) => matchesFilter(m, filter))].sort((a, b) => {
+      const aTime = a.kickoffUtc ? Date.parse(a.kickoffUtc) : Number.MAX_SAFE_INTEGER
+      const bTime = b.kickoffUtc ? Date.parse(b.kickoffUtc) : Number.MAX_SAFE_INTEGER
+      if (aTime !== bTime) return aTime - bTime
+      return a.id.localeCompare(b.id)
+    })
+  }, [group.matches, filter])
 
   const statusBadge =
     status === 'playing' && hasLive ? (
