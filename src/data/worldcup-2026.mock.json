@@ -119,14 +119,14 @@
             "flagUrl": "https://flagcdn.com/za.svg",
             "groupId": "A"
           },
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 2,
+          "awayScore": 0,
           "penaltiesHome": null,
           "penaltiesAway": null,
-          "status": "scheduled",
+          "status": "finished",
           "minute": null,
           "kickoffUtc": null,
-          "winnerTeamId": null
+          "winnerTeamId": "t-A-0"
         },
         {
           "id": "m-grp-002",
@@ -279,14 +279,14 @@
             "flagUrl": "https://flagcdn.com/cz.svg",
             "groupId": "A"
           },
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 2,
+          "awayScore": 1,
           "penaltiesHome": null,
           "penaltiesAway": null,
-          "status": "scheduled",
+          "status": "finished",
           "minute": null,
           "kickoffUtc": null,
-          "winnerTeamId": null
+          "winnerTeamId": "t-A-2"
         }
       ]
     },
@@ -409,11 +409,11 @@
             "flagUrl": "https://flagcdn.com/ba.svg",
             "groupId": "B"
           },
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 1,
+          "awayScore": 1,
           "penaltiesHome": null,
           "penaltiesAway": null,
-          "status": "scheduled",
+          "status": "finished",
           "minute": null,
           "kickoffUtc": null,
           "winnerTeamId": null
@@ -569,11 +569,11 @@
             "flagUrl": "https://flagcdn.com/ch.svg",
             "groupId": "B"
           },
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 1,
+          "awayScore": 1,
           "penaltiesHome": null,
           "penaltiesAway": null,
-          "status": "scheduled",
+          "status": "finished",
           "minute": null,
           "kickoffUtc": null,
           "winnerTeamId": null
@@ -699,11 +699,11 @@
             "flagUrl": "https://flagcdn.com/ma.svg",
             "groupId": "C"
           },
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 1,
+          "awayScore": 1,
           "penaltiesHome": null,
           "penaltiesAway": null,
-          "status": "scheduled",
+          "status": "finished",
           "minute": null,
           "kickoffUtc": null,
           "winnerTeamId": null
@@ -859,14 +859,14 @@
             "flagUrl": "https://flagcdn.com/gb-sct.svg",
             "groupId": "C"
           },
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 0,
+          "awayScore": 1,
           "penaltiesHome": null,
           "penaltiesAway": null,
-          "status": "scheduled",
+          "status": "finished",
           "minute": null,
           "kickoffUtc": null,
-          "winnerTeamId": null
+          "winnerTeamId": "t-C-3"
         }
       ]
     },
@@ -989,14 +989,14 @@
             "flagUrl": "https://flagcdn.com/py.svg",
             "groupId": "D"
           },
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 4,
+          "awayScore": 1,
           "penaltiesHome": null,
           "penaltiesAway": null,
-          "status": "scheduled",
+          "status": "finished",
           "minute": null,
           "kickoffUtc": null,
-          "winnerTeamId": null
+          "winnerTeamId": "t-D-0"
         },
         {
           "id": "m-grp-020",
@@ -1149,14 +1149,14 @@
             "flagUrl": "https://flagcdn.com/tr.svg",
             "groupId": "D"
           },
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 2,
+          "awayScore": 0,
           "penaltiesHome": null,
           "penaltiesAway": null,
-          "status": "scheduled",
+          "status": "finished",
           "minute": null,
           "kickoffUtc": null,
-          "winnerTeamId": null
+          "winnerTeamId": "t-D-2"
         }
       ]
     },
@@ -1279,14 +1279,14 @@
             "flagUrl": "https://flagcdn.com/cw.svg",
             "groupId": "E"
           },
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 7,
+          "awayScore": 1,
           "penaltiesHome": null,
           "penaltiesAway": null,
-          "status": "scheduled",
+          "status": "finished",
           "minute": null,
           "kickoffUtc": null,
-          "winnerTeamId": null
+          "winnerTeamId": "t-E-0"
         },
         {
           "id": "m-grp-026",
@@ -1439,14 +1439,14 @@
             "flagUrl": "https://flagcdn.com/ec.svg",
             "groupId": "E"
           },
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 1,
+          "awayScore": 0,
           "penaltiesHome": null,
           "penaltiesAway": null,
-          "status": "scheduled",
+          "status": "finished",
           "minute": null,
           "kickoffUtc": null,
-          "winnerTeamId": null
+          "winnerTeamId": "t-E-2"
         }
       ]
     },
@@ -1569,11 +1569,11 @@
             "flagUrl": "https://flagcdn.com/jp.svg",
             "groupId": "F"
           },
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 2,
+          "awayScore": 2,
           "penaltiesHome": null,
           "penaltiesAway": null,
-          "status": "scheduled",
+          "status": "finished",
           "minute": null,
           "kickoffUtc": null,
           "winnerTeamId": null
@@ -1729,14 +1729,14 @@
             "flagUrl": "https://flagcdn.com/tn.svg",
             "groupId": "F"
           },
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 5,
+          "awayScore": 1,
           "penaltiesHome": null,
           "penaltiesAway": null,
-          "status": "scheduled",
+          "status": "finished",
           "minute": null,
           "kickoffUtc": null,
-          "winnerTeamId": null
+          "winnerTeamId": "t-F-2"
         }
       ]
     },
@@ -1859,11 +1859,11 @@
             "flagUrl": "https://flagcdn.com/eg.svg",
             "groupId": "G"
           },
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 1,
+          "awayScore": 1,
           "penaltiesHome": null,
           "penaltiesAway": null,
-          "status": "scheduled",
+          "status": "finished",
           "minute": null,
           "kickoffUtc": null,
           "winnerTeamId": null
@@ -2149,11 +2149,11 @@
             "flagUrl": "https://flagcdn.com/cv.svg",
             "groupId": "H"
           },
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 0,
+          "awayScore": 0,
           "penaltiesHome": null,
           "penaltiesAway": null,
-          "status": "scheduled",
+          "status": "finished",
           "minute": null,
           "kickoffUtc": null,
           "winnerTeamId": null
@@ -2309,11 +2309,11 @@
             "flagUrl": "https://flagcdn.com/uy.svg",
             "groupId": "H"
           },
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 1,
+          "awayScore": 1,
           "penaltiesHome": null,
           "penaltiesAway": null,
-          "status": "scheduled",
+          "status": "finished",
           "minute": null,
           "kickoffUtc": null,
           "winnerTeamId": null
@@ -3803,5 +3803,5 @@
       "nextTieId": null
     }
   ],
-  "lastUpdatedUtc": "2026-06-15T23:38:00.089Z"
+  "lastUpdatedUtc": "2026-06-16T00:44:26.114Z"
 }
