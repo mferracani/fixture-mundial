@@ -55,7 +55,7 @@ export default function App() {
 
       {/* Nota: cargá los resultados vos mismo; se guardan en tu navegador */}
       {source === 'mock' && (
-        <div className="mt-6 flex flex-col gap-2 rounded-xl border border-sky2-400/20 bg-sky2-400/[0.07] px-4 py-3 text-sm sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-6 hidden flex-col gap-2 rounded-xl border border-sky2-400/20 bg-sky2-400/[0.07] px-4 py-3 text-sm sm:flex sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-start gap-2.5">
             <Info size={16} className="mt-0.5 shrink-0 text-sky2-300" aria-hidden />
             <p className="text-cream/75">

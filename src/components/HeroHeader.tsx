@@ -41,10 +41,10 @@ export function HeroHeader({
 
   return (
     <header className="relative overflow-hidden">
-      <div className="relative flex flex-col gap-5 pt-8 sm:pt-12">
+      <div className="relative flex flex-col gap-5 pt-5 sm:pt-12">
         <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <div className="mb-3 flex items-center gap-2">
+            <div className="mb-3 hidden items-center gap-2 sm:flex">
               <span className="inline-flex items-center gap-1.5 rounded-full border border-gold-300/25 bg-gold-300/[0.07] px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-gold-200">
                 <Radio size={11} aria-hidden /> Copa del Mundo
               </span>
@@ -53,13 +53,13 @@ export function HeroHeader({
             <h1 className="font-display text-4xl font-extrabold tracking-tight text-cream sm:text-6xl">
               <span className="text-gold-gradient">Mundial 2026</span>
             </h1>
-            <p className="mt-2 max-w-xl text-sm text-cream/55 sm:text-base">
+            <p className="mt-2 hidden max-w-xl text-sm text-cream/55 sm:block sm:text-base">
               Fixture, grupos, resultados y cruces en hora Argentina
             </p>
           </div>
 
           {/* Última actualización */}
-          <div className="flex items-center gap-3">
+          <div className="hidden items-center gap-3 sm:flex">
             <div className="text-right">
               <p className="text-[0.68rem] uppercase tracking-wider text-cream/40">
                 Última actualización
