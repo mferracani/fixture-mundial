@@ -2,6 +2,7 @@ import type { Group, KnockoutTie, Match, Stage, Standing, Team, WorldCupData } f
 import { computeStandings, allFinished, playedCount } from './standings'
 import { BRACKET, roundShortLabel, type SlotRef, type TieDef } from './bracket'
 import { thirdPlaceGroupForWinner, thirdPlaceLabel } from './thirdPlaceRules'
+import { KNOCKOUT_SCHEDULE } from './knockoutSchedule'
 
 // Resultado cargado manualmente por el usuario para un partido.
 export interface ScoreEntry {
@@ -116,6 +117,7 @@ function buildKnockoutMatch(
   away: Team,
   entry: ScoreEntry | undefined,
 ): Match {
+  const schedule = KNOCKOUT_SCHEDULE[def.id]
   const base: Match = {
     id: def.id,
     stage: def.round,
@@ -128,7 +130,9 @@ function buildKnockoutMatch(
     penaltiesAway: null,
     status: 'scheduled',
     minute: null,
-    kickoffUtc: null,
+    kickoffUtc: schedule?.kickoffUtc ?? null,
+    stadium: schedule?.stadium,
+    city: schedule?.city,
     winnerTeamId: null,
   }
   return applyResult(base, entry)
@@ -217,6 +221,9 @@ export function buildFixtureView(base: WorldCupData, results: ResultsMap): Fixtu
       round: def.round as Stage,
       side: def.side,
       position: def.position,
+      kickoffUtc: KNOCKOUT_SCHEDULE[def.id]?.kickoffUtc ?? null,
+      stadium: KNOCKOUT_SCHEDULE[def.id]?.stadium,
+      city: KNOCKOUT_SCHEDULE[def.id]?.city,
       match,
       sourceHome: h.label,
       sourceAway: a.label,
