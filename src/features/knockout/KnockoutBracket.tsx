@@ -59,19 +59,27 @@ function MobileSlot({
   team,
   label,
   showTeam,
+  confirmed = false,
 }: {
   team?: Team | null
   label: string
   showTeam: boolean
+  confirmed?: boolean
 }) {
+  const predicted = showTeam && !!team && !confirmed
+
   return (
     <div className="flex h-9 items-center gap-2 border-t border-white/10 px-2">
       {showTeam && team ? (
-        <Flag team={team} size={18} />
+        <Flag team={team} size={18} className={predicted ? 'grayscale opacity-45' : ''} />
       ) : (
         <span className="h-[18px] w-[18px] shrink-0 rounded-full bg-white/10" aria-hidden />
       )}
-      <span className="min-w-0 truncate text-[0.78rem] font-semibold text-cream/70">
+      <span
+        className={`min-w-0 truncate text-[0.78rem] font-semibold ${
+          predicted ? 'text-cream/35' : 'text-cream/70'
+        }`}
+      >
         {showTeam && team ? team.shortName : label}
       </span>
     </div>
@@ -94,8 +102,18 @@ function MobileBracketTie({
       <div className="flex h-6 items-center px-2 text-[0.68rem] font-semibold text-cream/45">
         <MobileTieDate tie={tie} />
       </div>
-      <MobileSlot team={tie.homeTeam} label={showTeams ? tie.sourceHome : 'Por determinar'} showTeam={showTeams} />
-      <MobileSlot team={tie.awayTeam} label={showTeams ? tie.sourceAway : 'Por determinar'} showTeam={showTeams} />
+      <MobileSlot
+        team={tie.homeTeam}
+        label={showTeams ? tie.sourceHome : 'Por determinar'}
+        showTeam={showTeams}
+        confirmed={tie.homeConfirmed}
+      />
+      <MobileSlot
+        team={tie.awayTeam}
+        label={showTeams ? tie.sourceAway : 'Por determinar'}
+        showTeam={showTeams}
+        confirmed={tie.awayConfirmed}
+      />
     </article>
   )
 }
