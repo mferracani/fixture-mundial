@@ -30,16 +30,58 @@ const MOBILE_STAGES: { stage: Stage; short: string }[] = [
   { stage: 'final', short: 'F' },
 ]
 
-/** Línea/rail sutil entre columnas para dar sensación de bracket. */
-function BracketRail({ flip = false }: { flip?: boolean }) {
+/** Conector real entre fases del bracket desktop. */
+function DesktopConnectorRail({
+  sourceCount,
+  targetCount,
+  flip = false,
+}: {
+  sourceCount: number
+  targetCount: number
+  flip?: boolean
+}) {
+  const visibleSourceCount = Math.min(sourceCount, targetCount * 2)
+  const centerY = (index: number, count: number) => ((index + 0.5) / count) * 100
+  const sourceX = flip ? 36 : 0
+  const targetX = flip ? 0 : 36
+
   return (
-    <div className="relative hidden w-6 shrink-0 lg:block" aria-hidden>
-      <span
-        className={`absolute top-1/2 h-px w-full bg-gradient-to-r ${
-          flip ? 'from-gold-300/30 to-transparent' : 'from-transparent to-gold-300/30'
-        }`}
-      />
-      <span className="absolute left-1/2 top-[15%] h-[70%] w-px -translate-x-1/2 bg-white/[0.06]" />
+    <div className="relative hidden w-9 shrink-0 self-stretch pb-2 pt-8 lg:block" aria-hidden>
+      <svg
+        className="h-full w-full overflow-visible"
+        viewBox="0 0 36 100"
+        preserveAspectRatio="none"
+        fill="none"
+      >
+        {Array.from({ length: visibleSourceCount }, (_, sourceIndex) => {
+          const targetIndex = Math.floor(sourceIndex / 2)
+          const sourceY = centerY(sourceIndex, sourceCount)
+          const targetY = centerY(targetIndex, targetCount)
+          const busX = flip ? (sourceIndex % 2 === 0 ? 15 : 10) : sourceIndex % 2 === 0 ? 21 : 26
+
+          return (
+            <path
+              key={sourceIndex}
+              d={`M${sourceX} ${sourceY} H${busX} V${targetY} H${targetX}`}
+              stroke="rgb(250 218 113 / 0.42)"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              vectorEffect="non-scaling-stroke"
+            />
+          )
+        })}
+        {Array.from({ length: targetCount }, (_, targetIndex) => (
+          <circle
+            key={targetIndex}
+            cx={targetX}
+            cy={centerY(targetIndex, targetCount)}
+            r="2"
+            fill="rgb(250 218 113 / 0.6)"
+            vectorEffect="non-scaling-stroke"
+          />
+        ))}
+      </svg>
     </div>
   )
 }
@@ -328,12 +370,13 @@ export function KnockoutBracket({ ties }: KnockoutBracketProps) {
           <div className="flex min-w-[1180px] items-stretch gap-1 px-1">
             {/* Lado izquierdo */}
             <KnockoutRoundColumn title={ROUND_TITLES.round32} ties={byRoundSide.r32L} className="w-[200px] shrink-0" />
-            <BracketRail />
+            <DesktopConnectorRail sourceCount={byRoundSide.r32L.length} targetCount={byRoundSide.r16L.length} />
             <KnockoutRoundColumn title={ROUND_TITLES.round16} ties={byRoundSide.r16L} className="w-[200px] shrink-0" />
-            <BracketRail />
+            <DesktopConnectorRail sourceCount={byRoundSide.r16L.length} targetCount={byRoundSide.qfL.length} />
             <KnockoutRoundColumn title={ROUND_TITLES.quarter} ties={byRoundSide.qfL} className="w-[200px] shrink-0" />
-            <BracketRail />
+            <DesktopConnectorRail sourceCount={byRoundSide.qfL.length} targetCount={byRoundSide.sfL.length} />
             <KnockoutRoundColumn title={ROUND_TITLES.semi} ties={byRoundSide.sfL} className="w-[200px] shrink-0" />
+            <DesktopConnectorRail sourceCount={byRoundSide.sfL.length} targetCount={byRoundSide.final.length} />
 
             {/* Centro: trofeo + final */}
             <div className="flex min-w-[260px] flex-1 flex-col items-center justify-center px-2">
@@ -360,12 +403,13 @@ export function KnockoutBracket({ ties }: KnockoutBracketProps) {
             </div>
 
             {/* Lado derecho (espejo) */}
+            <DesktopConnectorRail sourceCount={byRoundSide.sfR.length} targetCount={byRoundSide.final.length} flip />
             <KnockoutRoundColumn title={ROUND_TITLES.semi} ties={byRoundSide.sfR} align="right" className="w-[200px] shrink-0" />
-            <BracketRail flip />
+            <DesktopConnectorRail sourceCount={byRoundSide.qfR.length} targetCount={byRoundSide.sfR.length} flip />
             <KnockoutRoundColumn title={ROUND_TITLES.quarter} ties={byRoundSide.qfR} align="right" className="w-[200px] shrink-0" />
-            <BracketRail flip />
+            <DesktopConnectorRail sourceCount={byRoundSide.r16R.length} targetCount={byRoundSide.qfR.length} flip />
             <KnockoutRoundColumn title={ROUND_TITLES.round16} ties={byRoundSide.r16R} align="right" className="w-[200px] shrink-0" />
-            <BracketRail flip />
+            <DesktopConnectorRail sourceCount={byRoundSide.r32R.length} targetCount={byRoundSide.r16R.length} flip />
             <KnockoutRoundColumn title={ROUND_TITLES.round32} ties={byRoundSide.r32R} align="right" className="w-[200px] shrink-0" />
           </div>
         </div>
