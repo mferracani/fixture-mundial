@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Info, RotateCcw } from 'lucide-react'
 import { AppShell } from '@/components/AppShell'
 import { HeroHeader } from '@/components/HeroHeader'
+import { AutoCompleteBar } from '@/components/AutoCompleteBar'
 import { FilterBar } from '@/components/FilterBar'
 import { SearchInput } from '@/components/SearchInput'
 import { SkeletonGrid } from '@/components/SkeletonCard'
@@ -12,8 +12,10 @@ import { GroupsView } from '@/features/groups/GroupsView'
 import { UpcomingMatchesView } from '@/features/groups/UpcomingMatchesView'
 import { KnockoutView } from '@/features/knockout/KnockoutView'
 import { useWorldCupData } from '@/hooks/useWorldCupData'
+import { useAutoResults } from '@/hooks/useAutoResults'
 import { useOnlineStatus } from '@/hooks/useOnlineStatus'
 import { useResults } from '@/store/results'
+import { useSettings, RealDataProvider } from '@/store/settings'
 import { buildFixtureView } from '@/utils/fixture'
 import { countByState, type MatchFilter } from '@/utils/domain'
 
@@ -25,16 +27,34 @@ export default function App() {
   const online = useOnlineStatus()
   const { data, isLoading, isError, isFetching, refetch, source } = useWorldCupData()
   const { results, clearAll } = useResults()
+  const { autoComplete, setAutoComplete } = useSettings()
 
-  // Vista derivada: aplica los resultados cargados, recalcula posiciones (reglas
-  // FIFA) y resuelve el bracket (equipos probables / confirmados).
+  // Resultados reales (openfootball) cargados automáticamente cuando el modo
+  // autocompletar está activo. Se descargan de la red, no se persisten.
+  const auto = useAutoResults(data, autoComplete)
+  const realResults = auto.data?.results
+  const realIds = useMemo(
+    () => new Set(autoComplete && realResults ? Object.keys(realResults) : []),
+    [autoComplete, realResults],
+  )
+
+  // "Lo real pisa lo mío": los resultados reales reemplazan mis predicciones de
+  // partidos ya jugados; los partidos futuros conservan lo que cargué a mano.
+  const effectiveResults = useMemo(
+    () => (autoComplete && realResults ? { ...results, ...realResults } : results),
+    [autoComplete, realResults, results],
+  )
+
+  // Vista derivada: aplica los resultados, recalcula posiciones (reglas FIFA) y
+  // resuelve el bracket (equipos probables / confirmados).
   const view = useMemo(
-    () => (data ? buildFixtureView(data, results) : undefined),
-    [data, results],
+    () => (data ? buildFixtureView(data, effectiveResults) : undefined),
+    [data, effectiveResults],
   )
 
   const counts = useMemo(() => countByState(view), [view])
   const resultsCount = Object.keys(results).length
+  const realDataValue = useMemo(() => ({ autoComplete, realIds }), [autoComplete, realIds])
   const showUpcoming = section === 'groups' && filter === 'upcoming'
 
   const handleSectionChange = (nextSection: Section) => {
@@ -53,27 +73,18 @@ export default function App() {
         source={source}
       />
 
-      {/* Nota: cargá los resultados vos mismo; se guardan en tu navegador */}
+      {/* Control de autocompletado: resultados reales (openfootball) on/off */}
       {source === 'mock' && (
-        <div className="mt-6 hidden flex-col gap-2 rounded-xl border border-sky2-400/20 bg-sky2-400/[0.07] px-4 py-3 text-sm sm:flex sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-start gap-2.5">
-            <Info size={16} className="mt-0.5 shrink-0 text-sky2-300" aria-hidden />
-            <p className="text-cream/75">
-              <strong className="font-semibold text-cream">Cargá vos los goles</strong> de cada
-              partido: las posiciones se recalculan solas (reglas FIFA) y el bracket se va
-              completando. Se guardan en este navegador para la próxima vez.
-            </p>
-          </div>
-          {resultsCount > 0 && (
-            <button
-              type="button"
-              onClick={clearAll}
-              className="inline-flex shrink-0 items-center gap-1.5 self-start rounded-full border border-white/12 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-cream/70 transition-colors hover:border-red-400/40 hover:text-red-200 sm:self-auto"
-            >
-              <RotateCcw size={13} aria-hidden /> Reiniciar resultados ({resultsCount})
-            </button>
-          )}
-        </div>
+        <AutoCompleteBar
+          autoComplete={autoComplete}
+          onToggle={setAutoComplete}
+          isFetching={auto.isFetching}
+          isError={auto.isError}
+          appliedCount={auto.data?.appliedCount ?? 0}
+          fetchedAt={auto.data?.fetchedAt ?? null}
+          manualCount={resultsCount}
+          onClearManual={clearAll}
+        />
       )}
 
       {/* Aviso de error de actualización manteniendo la última data en pantalla */}
@@ -119,20 +130,22 @@ export default function App() {
           // key={section} remonta la vista al cambiar de sección y reproduce la
           // animación de entrada. Evitamos AnimatePresence mode="wait" para que
           // la vista nueva monte de inmediato (sin depender del exit anterior).
-          <motion.div
-            key={section}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.22, ease: 'easeOut' }}
-          >
-            {showUpcoming ? (
-              <UpcomingMatchesView groups={view?.groups ?? []} knockout={view?.knockout ?? []} />
-            ) : section === 'groups' ? (
-              <GroupsView groups={view?.groups ?? []} filter={filter} search={search} />
-            ) : (
-              <KnockoutView ties={view?.knockout ?? []} />
-            )}
-          </motion.div>
+          <RealDataProvider value={realDataValue}>
+            <motion.div
+              key={section}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.22, ease: 'easeOut' }}
+            >
+              {showUpcoming ? (
+                <UpcomingMatchesView groups={view?.groups ?? []} knockout={view?.knockout ?? []} />
+              ) : section === 'groups' ? (
+                <GroupsView groups={view?.groups ?? []} filter={filter} search={search} />
+              ) : (
+                <KnockoutView ties={view?.knockout ?? []} />
+              )}
+            </motion.div>
+          </RealDataProvider>
         )}
       </div>
     </AppShell>

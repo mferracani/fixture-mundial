@@ -115,6 +115,28 @@ La app funciona como tu propio **predictor editable**:
 Cuando se conecta una API real (`VITE_SPORTS_API_BASE_URL`), esos resultados
 llegan automáticamente desde la fuente en vivo.
 
+## Autocompletado de resultados reales (openfootball)
+
+Con el interruptor **Auto** del banner activás la carga automática de los
+resultados reales, sin API key ni backend:
+
+- La fuente es
+  [openfootball/worldcup.json](https://github.com/openfootball/worldcup.json)
+  (dominio público), que se descarga directo desde el navegador
+  (`raw.githubusercontent`, con jsDelivr como respaldo).
+- Solo se mapea la **fase de grupos**, por (grupo + par de códigos ISO): un join
+  100% determinístico (ver `src/services/realResults/`). La **eliminatoria se
+  completa sola** propagando los clasificados reales por el motor de bracket.
+- **Lo real pisa lo mío**: cuando un partido termina de verdad, su marcador
+  reemplaza tu predicción (con un distintivo **Real** y sin edición). Tus
+  predicciones de partidos aún no jugados quedan intactas, y si apagás el
+  autocompletado vuelven tus números (las predicciones nunca se borran).
+- Se refresca solo cada 5 min (20 min con la pestaña oculta). openfootball se
+  actualiza estilo wiki (~1 vez por día), no minuto a minuto.
+
+El estado del interruptor se guarda en `localStorage`
+(`mundial2026:settings:v1`).
+
 ## Datos
 
 El principio es **no inventar nada**. Lo que muestra el mock es 100% real y

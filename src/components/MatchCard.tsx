@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
-import { MapPin, X } from 'lucide-react'
+import { MapPin, Radio, X } from 'lucide-react'
 import type { Match } from '@/types'
 import { isLive } from '@/utils/domain'
 import { useResults } from '@/store/results'
+import { useRealData } from '@/store/settings'
 import { Flag } from './Flag'
 import { MatchStatusBadge } from './MatchStatusBadge'
 import { DateTimeArgentina } from './DateTimeArgentina'
@@ -56,11 +57,16 @@ export function MatchCard({
   className = '',
 }: MatchCardProps) {
   const { results, setScore, clearScore } = useResults()
+  const { realIds } = useRealData()
   const rawEntry = results[match.id]
   const live = isLive(match)
   const finished = match.status === 'finished'
   const played = finished || live
   const { homeTeam, awayTeam, homeScore, awayScore, penaltiesHome, penaltiesAway } = match
+
+  // Marcador real traído de la fuente: se muestra como dato, no editable.
+  const isReal = realIds.has(match.id)
+  const showEditor = editable && !isReal
 
   const homeWon = finished && match.winnerTeamId === homeTeam?.id
   const awayWon = finished && match.winnerTeamId === awayTeam?.id
@@ -103,7 +109,7 @@ export function MatchCard({
 
         {/* Marcador editable / marcador / vs */}
         <div className="flex shrink-0 items-center gap-2 px-1">
-          {editable ? (
+          {showEditor ? (
             <ScoreEditor
               homeScore={editorHomeScore}
               awayScore={editorAwayScore}
@@ -159,6 +165,14 @@ export function MatchCard({
       {/* Meta: estado + fecha + sede */}
       <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 border-t border-white/[0.05] pt-2.5">
         <MatchStatusBadge match={match} />
+        {isReal && (
+          <span
+            className="inline-flex items-center gap-1 rounded-full border border-gold-400/30 bg-gold-400/10 px-2 py-0.5 text-[0.62rem] font-semibold uppercase tracking-wide text-gold-200"
+            title="Resultado real cargado automáticamente desde openfootball"
+          >
+            <Radio size={10} aria-hidden /> Real
+          </span>
+        )}
         <DateTimeArgentina kickoffUtc={match.kickoffUtc} />
         {match.stadium && (
           <span className="inline-flex items-center gap-1 text-xs text-cream/45">
@@ -169,7 +183,7 @@ export function MatchCard({
             </span>
           </span>
         )}
-        {editable && hasLocalOverride && (
+        {showEditor && hasLocalOverride && (
           <button
             type="button"
             onClick={() => clearScore(match.id)}
