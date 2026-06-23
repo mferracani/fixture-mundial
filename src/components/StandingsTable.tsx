@@ -8,14 +8,13 @@ interface StandingsTableProps {
   highlightTeamId?: string | null
 }
 
+// Solo lo esencial: dejamos más ancho para el nombre del país (en español).
+// GF, GC y DG se omiten a propósito (la DG se sigue usando para desempatar).
 const COLS = [
   { key: 'played', label: 'PJ', title: 'Partidos jugados' },
   { key: 'won', label: 'G', title: 'Ganados' },
   { key: 'drawn', label: 'E', title: 'Empatados' },
   { key: 'lost', label: 'P', title: 'Perdidos' },
-  { key: 'goalsFor', label: 'GF', title: 'Goles a favor' },
-  { key: 'goalsAgainst', label: 'GC', title: 'Goles en contra' },
-  { key: 'goalDifference', label: 'DG', title: 'Diferencia de gol' },
 ] as const
 
 /** Indicador lateral de zona de clasificación (no depende solo del color). */
@@ -56,8 +55,8 @@ export function StandingsTable({ standings, teams, highlightTeamId }: StandingsT
   const teamById = (id: string) => teams.find((t) => t.id === id)
 
   return (
-    <div className="scroll-elegant -mx-1 overflow-x-auto px-1">
-      <table className="w-full min-w-[336px] border-separate border-spacing-y-1 text-[0.8rem]">
+    <div className="scroll-elegant -mx-1 px-1">
+      <table className="w-full table-fixed border-separate border-spacing-y-1 text-[0.8rem]">
         <caption className="sr-only">Tabla de posiciones del grupo</caption>
         <thead>
           <tr className="text-[0.68rem] uppercase tracking-wider text-cream/40">
@@ -103,17 +102,17 @@ export function StandingsTable({ standings, teams, highlightTeamId }: StandingsT
                         : 'bg-white/[0.02]'
                   }`}
                 >
-                  <span className="relative flex items-center gap-2 pl-2">
+                  <span className="relative flex items-center gap-1.5 pl-1.5">
                     <QualMarker status={s.qualificationStatus} />
-                    <span className="tnum w-4 shrink-0 text-center text-xs font-bold text-cream/50">
+                    <span className="tnum w-3.5 shrink-0 text-center text-xs font-bold text-cream/50">
                       {s.rank}
                     </span>
-                    <Flag team={team} size={18} />
+                    <Flag team={team} size={16} />
                     <span
-                      className="truncate font-semibold text-cream"
+                      className="min-w-0 flex-1 truncate font-semibold text-cream"
                       title={`${team?.name ?? ''} — ${qualLabel(s.qualificationStatus)}`}
                     >
-                      {team?.shortName ?? '—'}
+                      {team?.name ?? '—'}
                     </span>
                     {(qualified || bestThird) && (
                       <span className="sr-only">{qualLabel(s.qualificationStatus)}</span>
@@ -123,11 +122,10 @@ export function StandingsTable({ standings, teams, highlightTeamId }: StandingsT
                 {COLS.map((c) => (
                   <td
                     key={c.key}
-                    className={`tnum px-0.5 py-1.5 text-center tabular-nums ${
+                    className={`tnum px-0.5 py-1.5 text-center tabular-nums text-cream/65 ${
                       qualified ? 'bg-pitch-500/[0.05]' : bestThird ? 'bg-gold-300/[0.04]' : 'bg-white/[0.015]'
-                    } ${c.key === 'goalDifference' ? 'text-cream/70' : 'text-cream/65'}`}
+                    }`}
                   >
-                    {c.key === 'goalDifference' && s.goalDifference > 0 ? '+' : ''}
                     {s[c.key]}
                   </td>
                 ))}
