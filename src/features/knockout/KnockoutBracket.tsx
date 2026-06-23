@@ -5,7 +5,7 @@ import { KnockoutRoundColumn } from './KnockoutRoundColumn'
 import { KnockoutMatchCard } from './KnockoutMatchCard'
 import { TrophyCenterpiece } from '@/components/TrophyCenterpiece'
 import { Flag } from '@/components/Flag'
-import { formatDayArgentina, formatTimeArgentina } from '@/utils/date'
+import { formatKickoffArgentina } from '@/utils/date'
 import { BRACKET } from '@/utils/bracket'
 
 interface KnockoutBracketProps {
@@ -91,11 +91,9 @@ function MobileTieDate({ tie }: { tie: KnockoutTie }) {
   if (!tie.kickoffUtc) {
     return <span>Fecha a confirmar</span>
   }
-  return (
-    <span>
-      {formatDayArgentina(tie.kickoffUtc)} · {formatTimeArgentina(tie.kickoffUtc)}
-    </span>
-  )
+  // Mismo formato que el resto de la app: hora de Argentina por defecto y, para
+  // los partidos del 24/6 al 12/7, la hora de España entre paréntesis.
+  return <span className="truncate">{formatKickoffArgentina(tie.kickoffUtc)}</span>
 }
 
 function MobileSlot({
