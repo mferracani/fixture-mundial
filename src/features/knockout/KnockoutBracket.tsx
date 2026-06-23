@@ -141,7 +141,10 @@ function MobileTeamToken({ team, muted = true }: { team: Team; muted?: boolean }
   )
 }
 
-function MobileTeamVs({ home, away }: { home: Team | null; away: Team | null }) {
+// Pareja de candidatos para un slot: uno U OTRO avanza (el ganador del cruce
+// previo). Por eso van separados con "o", no con "vs" (el "vs" se reserva para
+// el cruce real de octavos, entre los dos bloques).
+function MobileTeamOr({ home, away }: { home: Team | null; away: Team | null }) {
   return (
     <div className="flex min-w-0 items-center gap-1.5">
       {home ? (
@@ -149,7 +152,7 @@ function MobileTeamVs({ home, away }: { home: Team | null; away: Team | null }) 
       ) : (
         <span className="h-5 w-12 rounded-full bg-white/[0.04]" aria-hidden />
       )}
-      <span className="text-[0.58rem] font-bold uppercase text-gold-200/45">vs</span>
+      <span className="text-[0.6rem] font-bold lowercase text-cream/40">o</span>
       {away ? (
         <MobileTeamToken team={away} />
       ) : (
@@ -169,7 +172,7 @@ function MobileCandidateBlock({
   if (sourceTie?.homeTeam || sourceTie?.awayTeam) {
     return (
       <div className="rounded-lg border border-white/[0.06] bg-white/[0.025] px-2 py-1.5">
-        <MobileTeamVs home={sourceTie.homeTeam ?? null} away={sourceTie.awayTeam ?? null} />
+        <MobileTeamOr home={sourceTie.homeTeam ?? null} away={sourceTie.awayTeam ?? null} />
       </div>
     )
   }
