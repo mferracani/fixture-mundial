@@ -10,6 +10,10 @@ export interface AgendaMatch {
   /** Placeholders para cruces sin equipos definidos. */
   sourceHome?: string
   sourceAway?: string
+  /** ¿El equipo está confirmado o es una predicción (gris)? En grupos siempre
+      es true; en eliminatoria depende de que el grupo/cruce previo esté resuelto. */
+  homeConfirmed: boolean
+  awayConfirmed: boolean
 }
 
 export interface AgendaDay {
@@ -62,7 +66,8 @@ export function buildAgenda(groups: Group[], knockout: KnockoutTie[]): AgendaDay
   for (const g of groups) {
     for (const m of g.matches) {
       if (!m.kickoffUtc) continue
-      items.push({ id: m.id, match: m, competition: g.name })
+      // En grupos los equipos son reales: siempre confirmados.
+      items.push({ id: m.id, match: m, competition: g.name, homeConfirmed: true, awayConfirmed: true })
     }
   }
 
@@ -75,6 +80,9 @@ export function buildAgenda(groups: Group[], knockout: KnockoutTie[]): AgendaDay
       competition: ROUND_LABELS[tie.round] ?? roundShortLabel(tie.id),
       sourceHome: tie.sourceHome,
       sourceAway: tie.sourceAway,
+      // Predicho hasta que el grupo/cruce previo esté resuelto.
+      homeConfirmed: !!tie.homeConfirmed,
+      awayConfirmed: !!tie.awayConfirmed,
     })
   }
 

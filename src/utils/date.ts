@@ -42,6 +42,19 @@ export function formatTimeArgentina(utcIso: string): string {
   }
 }
 
+/**
+ * Hora de España ("16:00") solo para los partidos entre el 24/6 y el 12/7
+ * (período en que el usuario está en España). Devuelve null fuera de ese rango.
+ */
+export function spainTimeInWindow(utcIso: string): string | null {
+  try {
+    if (!shouldShowSpainTime(utcIso)) return null
+    return formatInTimeZone(utcIso, SPAIN_TZ, 'HH:mm', { locale: es })
+  } catch {
+    return null
+  }
+}
+
 /** Solo el día: "Lun 15 Jun" */
 export function formatDayArgentina(utcIso: string): string {
   try {

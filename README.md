@@ -103,6 +103,12 @@ hora de Argentina (ver `src/utils/agenda.ts`).
   marcado, y el botón "Ir a hoy" vuelve siempre al presente.
 - Cada partido muestra su **hora** (ARG); los **ya jugados** llevan su marcador
   con el ganador destacado, y los **próximos** solo hora y equipos.
+- Para los partidos entre el **24/6 y el 12/7** se agrega la **hora de España**
+  entre paréntesis debajo de la de Argentina (`(21:00 ESP)`).
+- La **eliminatoria** también aparece por día: los equipos aún no asegurados se
+  muestran en **gris ("prob.")** y se confirman a color cuando el grupo/cruce
+  previo queda resuelto (igual que el bracket de desktop). Así se ven los
+  **cruces probables** y qué día jugaría cada equipo en la próxima fase.
 - Filas compactas pensadas para **mobile**: el día entra prácticamente en una
   sola pantalla, sin scroll innecesario.
 
