@@ -205,6 +205,11 @@ function MobilePossibleSources({
   tiesById: Map<string, KnockoutTie>
   sourceIdsByTieId: Map<string, string[]>
 }) {
+  // Candidatos de un slot, depurando a los eliminados. Si un lado del cruce
+  // previo ya tiene equipo resuelto, ese (y solo ese) avanza por ese lado; los
+  // que perdieron desaparecen. Si todavía no está definido, se baja al sub-árbol
+  // que lo alimenta. Así, a medida que se juegan rondas, la lista se limpia
+  // sola: cuando estamos en octavos, semifinal deja de mostrar las 8 opciones.
   const getCandidates = (tieId: string, seen = new Set<string>()): Team[] => {
     if (seen.has(tieId)) return []
     seen.add(tieId)
@@ -212,16 +217,22 @@ function MobilePossibleSources({
     const sourceTie = tiesById.get(tieId)
     if (!sourceTie) return []
 
-    const directTeams = [sourceTie.homeTeam, sourceTie.awayTeam].filter(Boolean) as Team[]
-    if (directTeams.length > 0) return directTeams
-
-    const childIds = sourceIdsByTieId.get(tieId) ?? []
+    const feeders = sourceIdsByTieId.get(tieId) ?? []
     const byId = new Map<string, Team>()
-    for (const childId of childIds) {
-      for (const team of getCandidates(childId, seen)) {
-        byId.set(team.id, team)
-      }
+
+    // Lado local: equipo resuelto, o el sub-árbol que lo alimenta.
+    if (sourceTie.homeTeam) {
+      byId.set(sourceTie.homeTeam.id, sourceTie.homeTeam)
+    } else if (feeders[0]) {
+      for (const team of getCandidates(feeders[0], seen)) byId.set(team.id, team)
     }
+    // Lado visitante.
+    if (sourceTie.awayTeam) {
+      byId.set(sourceTie.awayTeam.id, sourceTie.awayTeam)
+    } else if (feeders[1]) {
+      for (const team of getCandidates(feeders[1], seen)) byId.set(team.id, team)
+    }
+
     return [...byId.values()]
   }
 
