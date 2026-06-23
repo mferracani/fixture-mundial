@@ -8,6 +8,7 @@ import { SearchInput } from '@/components/SearchInput'
 import { SkeletonGrid } from '@/components/SkeletonCard'
 import { ErrorState } from '@/components/ErrorState'
 import type { Section } from '@/components/TopNavigation'
+import { AgendaView } from '@/features/agenda/AgendaView'
 import { GroupsView } from '@/features/groups/GroupsView'
 import { UpcomingMatchesView } from '@/features/groups/UpcomingMatchesView'
 import { KnockoutView } from '@/features/knockout/KnockoutView'
@@ -20,7 +21,7 @@ import { buildFixtureView } from '@/utils/fixture'
 import { countByState, type MatchFilter } from '@/utils/domain'
 
 export default function App() {
-  const [section, setSection] = useState<Section>('groups')
+  const [section, setSection] = useState<Section>('agenda')
   const [filter, setFilter] = useState<MatchFilter>('all')
   const [search, setSearch] = useState('')
 
@@ -137,7 +138,9 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.22, ease: 'easeOut' }}
             >
-              {showUpcoming ? (
+              {section === 'agenda' ? (
+                <AgendaView groups={view?.groups ?? []} knockout={view?.knockout ?? []} />
+              ) : showUpcoming ? (
                 <UpcomingMatchesView groups={view?.groups ?? []} knockout={view?.knockout ?? []} />
               ) : section === 'groups' ? (
                 <GroupsView groups={view?.groups ?? []} filter={filter} search={search} />

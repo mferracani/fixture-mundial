@@ -93,18 +93,20 @@ export function AutoCompleteBar({
               </span>
             ) : (
               <>
-                Los resultados reales se cargan solos desde{' '}
-                <a
-                  href="https://github.com/openfootball/worldcup.json"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-gold-200 underline decoration-gold-400/40 underline-offset-2 hover:text-gold-100"
-                >
-                  openfootball
-                </a>{' '}
-                y pisan tus predicciones jugadas.{' '}
+                <span className="hidden sm:inline">
+                  Los resultados reales se cargan solos desde{' '}
+                  <a
+                    href="https://github.com/openfootball/worldcup.json"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-gold-200 underline decoration-gold-400/40 underline-offset-2 hover:text-gold-100"
+                  >
+                    openfootball
+                  </a>{' '}
+                  y pisan tus predicciones jugadas.{' '}
+                </span>
                 <span className="whitespace-nowrap text-cream/55">
-                  {appliedCount} cargados{time ? ` · ${time} ARG` : ''}
+                  {appliedCount} reales{time ? ` · ${time} ARG` : ''}
                   {isFetching ? ' · actualizando…' : ''}
                 </span>
               </>
@@ -112,9 +114,12 @@ export function AutoCompleteBar({
           </p>
         ) : (
           <p className="text-cream/75">
-            <strong className="font-semibold text-cream">Modo predicción.</strong> Cargá vos los
-            goles: las posiciones se recalculan solas (reglas FIFA) y el bracket se va completando.
-            Se guardan en este navegador.
+            <strong className="font-semibold text-cream">Modo predicción.</strong>{' '}
+            <span className="hidden sm:inline">
+              Cargá vos los goles: las posiciones se recalculan solas (reglas FIFA) y el bracket se
+              va completando. Se guardan en este navegador.
+            </span>
+            <span className="sm:hidden text-cream/55">Cargá vos los goles.</span>
           </p>
         )}
       </div>

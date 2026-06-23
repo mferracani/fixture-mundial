@@ -93,6 +93,19 @@ Contraste AA, navegación por teclado con foco visible, tablas con headers
 correctos, banderas con texto alternativo, y la información de clasificación y
 estado no depende solo del color (marcadores e íconos además del color).
 
+## Agenda diaria ("Por día")
+
+Es la **vista por defecto al abrir**: muestra los partidos agrupados por día en
+hora de Argentina (ver `src/utils/agenda.ts`).
+
+- Arranca en **hoy** (o el próximo día con partidos si hoy no hay).
+- Selector de días horizontal con scroll; el día actual queda **centrado** y
+  marcado, y el botón "Ir a hoy" vuelve siempre al presente.
+- Cada partido muestra su **hora** (ARG); los **ya jugados** llevan su marcador
+  con el ganador destacado, y los **próximos** solo hora y equipos.
+- Filas compactas pensadas para **mobile**: el día entra prácticamente en una
+  sola pantalla, sin scroll innecesario.
+
 ## Carga manual de resultados (modo predictor)
 
 La app funciona como tu propio **predictor editable**:

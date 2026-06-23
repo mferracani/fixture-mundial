@@ -62,3 +62,35 @@ export function formatUpdatedAt(utcIso: string): string {
     return '--:--'
   }
 }
+
+// ---- Agrupación por día (hora de Argentina) ----
+
+/** Clave de día en hora de Argentina: "2026-06-23". */
+export function dayKeyArgentina(utcIso: string): string {
+  return formatInTimeZone(utcIso, ARGENTINA_TZ, 'yyyy-MM-dd')
+}
+
+/** Clave del día de hoy en hora de Argentina. */
+export function todayKeyArgentina(): string {
+  return formatInTimeZone(new Date(), ARGENTINA_TZ, 'yyyy-MM-dd')
+}
+
+/** Etiqueta corta para el selector de días: { weekday: "Mar", day: "23", month: "Jun" }. */
+export function dayChipParts(dayKey: string): { weekday: string; day: string; month: string } {
+  const iso = `${dayKey}T12:00:00.000Z` // mediodía UTC: el día calendario en ARG no cambia
+  return {
+    weekday: capitalize(formatInTimeZone(iso, ARGENTINA_TZ, 'EEE', { locale: es })),
+    day: formatInTimeZone(iso, ARGENTINA_TZ, 'd', { locale: es }),
+    month: capitalize(formatInTimeZone(iso, ARGENTINA_TZ, 'MMM', { locale: es })),
+  }
+}
+
+/** Encabezado largo del día: "Martes 23 de junio". */
+export function formatDayHeading(dayKey: string): string {
+  const iso = `${dayKey}T12:00:00.000Z`
+  try {
+    return capitalize(formatInTimeZone(iso, ARGENTINA_TZ, "EEEE d 'de' MMMM", { locale: es }))
+  } catch {
+    return dayKey
+  }
+}

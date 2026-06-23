@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import { LayoutGrid, GitMerge } from 'lucide-react'
+import { CalendarDays, LayoutGrid, GitMerge } from 'lucide-react'
 
-export type Section = 'groups' | 'knockout'
+export type Section = 'agenda' | 'groups' | 'knockout'
 
 interface TopNavigationProps {
   active: Section
@@ -9,6 +9,7 @@ interface TopNavigationProps {
 }
 
 const TABS: { id: Section; label: string; icon: typeof LayoutGrid }[] = [
+  { id: 'agenda', label: 'Por día', icon: CalendarDays },
   { id: 'groups', label: 'Grupos', icon: LayoutGrid },
   { id: 'knockout', label: 'Eliminatorias', icon: GitMerge },
 ]
