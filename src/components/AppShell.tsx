@@ -17,8 +17,8 @@ export function AppShell({ section, onSectionChange, offline, children }: AppShe
       <div className="sticky top-0 z-40">
         <OfflineBanner show={offline} />
         <div className="border-b border-white/[0.06] bg-night-950/70 backdrop-blur-xl">
-          <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-            <a href="#" className="flex items-center gap-2.5" aria-label="Mundial 2026 — inicio">
+          <div className="mx-auto flex max-w-7xl flex-col gap-2.5 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-6">
+            <a href="#" className="flex items-center gap-2.5 self-start" aria-label="Mundial 2026 — inicio">
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gold-gradient text-night-950">
                 <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor" aria-hidden>
                   <circle cx="16" cy="12" r="7" />
